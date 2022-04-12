@@ -142,6 +142,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\RulesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -150,9 +151,18 @@
     <Compile Include="Migrations\202203311030414_DbDenemesi.designer.cs">
       <DependentUpon>202203311030414_DbDenemesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204121640574_RulesEklendi.cs" />
+    <Compile Include="Migrations\202204121640574_RulesEklendi.Designer.cs">
+      <DependentUpon>202204121640574_RulesEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204121704418_RuleTitleEklendi.cs" />
+    <Compile Include="Migrations\202204121704418_RuleTitleEklendi.Designer.cs">
+      <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\CONTEXT.cs" />
     <Compile Include="Models\siniflar\Members.cs" />
+    <Compile Include="Models\siniflar\Rules.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +257,7 @@
     <Content Include="Views\Home\RulesPage.cshtml" />
     <Content Include="Views\Home\sil.cshtml" />
     <Content Include="Views\Main\MainMenuPage.cshtml" />
+    <Content Include="Views\Rules\RulesIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -268,6 +279,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203311030414_DbDenemesi.resx">
       <DependentUpon>202203311030414_DbDenemesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204121640574_RulesEklendi.resx">
+      <DependentUpon>202204121640574_RulesEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204121704418_RuleTitleEklendi.resx">
+      <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

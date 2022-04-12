@@ -36,15 +36,6 @@ namespace At_Yarisi.Controllers
             }
             return View(member);
         }
-        /*
-        public ActionResult RulesDeneme()
-        {
-            ViewBag.Message = "Rules Page";
-
-            return View();
-        }
-        */
-        //rules ekranı eklenip veriler listlenmeyi denenicek
 
     }
 }

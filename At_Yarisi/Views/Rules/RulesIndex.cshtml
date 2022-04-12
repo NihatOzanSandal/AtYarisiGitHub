@@ -1,0 +1,80 @@
+﻿@model IEnumerable<At_Yarisi.Models.siniflar.Rules>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RulesIndex</title>
+    <link href="/Content/RulesStyle.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+    .button {
+        background-color: darkslategrey;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        left: 600px;
+        border: 600px;
+    }
+
+    .kural1 {
+        margin-top: 170px;
+        margin-left: 410px;
+        width: 50%;
+        padding: 0px;
+    }
+
+    .kural {
+        margin-top: 0px;
+        margin-left: 410px;
+        width: 50%;
+        padding: 0px;
+    }
+
+    .paragraf {
+        left: 360px;
+        top: 650px;
+        color: aliceblue;
+    }
+
+    div.relative {
+        position: absolute;
+        left: 800px;
+        top: 645px;
+    }
+</style>
+<body>
+    
+    <table class="table">
+       
+        <div class="kural1">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <div class="kural">
+
+                    <h2 style="color:yellow;">
+                        @Html.DisplayFor(modelItem => item.RuleTitle)
+                    </h2>
+                    <p class="paragraf">
+                        @Html.DisplayFor(modelItem => item.Rule)
+                    </p>
+
+                </div>
+                
+            </tr>
+        }
+            </div>
+
+        </table>
+    </body>
+</html>
