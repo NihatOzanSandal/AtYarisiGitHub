@@ -245,7 +245,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\LoginPage.cshtml" />
     <Content Include="Views\Home\GetStartedPage.cshtml" />
     <Content Include="Views\Home\StartupSelectionPage.cshtml" />
     <Content Include="Views\Home\CreateAccountPage.cshtml" />
@@ -258,6 +257,7 @@
     <Content Include="Views\Home\sil.cshtml" />
     <Content Include="Views\Main\MainMenuPage.cshtml" />
     <Content Include="Views\Rules\RulesIndex.cshtml" />
+    <Content Include="Views\Home\LoginPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
