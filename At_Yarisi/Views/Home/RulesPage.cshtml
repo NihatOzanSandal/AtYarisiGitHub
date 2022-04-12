@@ -1,0 +1,103 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RulesPage</title>
+    <link href="/Content/RulesStyle.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+    .button {
+        background-color: darkslategrey;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        left: 600px;
+        border: 600px;
+    }
+    .kural1 {
+        margin-top: 170px;
+        margin-left: 410px;
+        width: 50%;
+        padding: 0px;
+    }
+
+    .kural {
+        margin-top: 0px;
+        margin-left: 410px;
+        width: 50%;
+        padding: 0px;
+    }
+
+    .paragraf {
+        left: 360px;
+        top: 650px;
+        color: aliceblue;
+    }
+
+    div.relative {
+        position: absolute;
+        left: 800px;
+        top: 645px;
+    }
+</style>
+<body>
+    <div>
+        <div class="kural1">
+
+            <h2 style="color:yellow;">
+                At Oranları
+            </h2>
+            <p class="paragraf">
+                Oyunda 50 at mevcuttur ve her bir atın kazanma oranları belirtilmiştir ve bütün atlar için bahis tutarları eşittir kazanma
+                oranı düşük olan at daha fazla kazanç getiricektir kazanma oranı yüksek olan ise daha düşük kazanç getirir
+            </p>
+
+        </div>
+        <div class="kural">
+
+            <h2 style="color:yellow;">
+                Bahis
+            </h2>
+            <p class="paragraf" >Bir oyuncu yalnızca bir ata bahis oynayabilir</p>
+
+        </div>
+        <div class="kural">
+
+            <h2 style="color:yellow;">
+               Bahis Limiti
+            </h2>
+            <p class="paragraf">Minimum 10 Chip = 1 TL ve Maksimum 10.000 Chip = 1000 TL</p>
+
+        </div>
+        <div class="kural">
+
+            <h2 style="color:yellow;">
+                Main Event
+            </h2>
+            <p class="paragraf">Üye hesabı ile giriş yapılır ve bakiye yüklendikden sonra oynanır</p>
+
+        </div>
+        <div class="kural">
+
+            <h2 style="color:yellow;">
+                Single Event
+            </h2>
+            <p class="paragraf">Herhangi bir üyelik gerekmez risksiz ve kazançsız bir şekilde oynanır</p>
+
+        </div>
+
+        <div class="relative">
+            <a href="/Home/StartupSelectionPage" class="button">Close</a>
+        </div>
+    </div>
+</body>
+</html>

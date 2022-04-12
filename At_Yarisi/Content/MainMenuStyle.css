@@ -1,0 +1,98 @@
+body {
+    background-image: url("../images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    left: 600px;
+    border: 600px;
+}
+.Btn1 {
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn2 {
+    position: absolute;
+    left: 0px;
+    top: 230px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn3 {
+    position: absolute;
+    left: 0px;
+    top: 310px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+.Btn4 {
+    position: absolute;
+    left: 0px;
+    top: 390px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn5 {
+    position: absolute;
+    left: 0px;
+    top: 470px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+.kural1 {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 50%;
+    padding: 0px;
+}
+.kural2 {
+    margin-top: 0px;
+    margin-left: 650px;
+    width: 50%;
+    padding: 0px;
+}

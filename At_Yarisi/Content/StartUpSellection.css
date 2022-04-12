@@ -1,0 +1,63 @@
+body {
+    background-image: url("../images/StartUpSellectionSml2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+SingleEvent {
+    top: 20px;
+    left: 20px;
+}
+
+div.relative {
+    position: relative;
+    left: 30px;
+    border: 400px;
+}
+
+
+.BtnLogin {
+    position: absolute;
+    left: 360px;
+    top: 650px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.BtnRules {
+    position: absolute;
+    left: 770px;
+    top: 650px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+.button4 {
+    border-radius: 12px;
+}
+
+.BtnStartRiskFree {
+    position: absolute;
+    left: 1160px;
+    top: 650px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
