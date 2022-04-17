@@ -140,6 +140,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\RulesController.cs" />
@@ -258,6 +259,7 @@
     <Content Include="Views\Main\MainMenuPage.cshtml" />
     <Content Include="Views\Rules\RulesIndex.cshtml" />
     <Content Include="Views\Home\LoginPage.cshtml" />
+    <Content Include="Views\GirisYap\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
