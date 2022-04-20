@@ -9,6 +9,7 @@ namespace At_Yarisi.Controllers
 {
     public class UsersController : Controller
     {
+        //SONRADAN SİLİNEBİLİR!!!!!!!
         private CONTEXT db = new CONTEXT();
         // GET: Users
         public ActionResult Index()

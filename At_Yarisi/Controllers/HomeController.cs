@@ -11,13 +11,28 @@ namespace At_Yarisi.Controllers
 {
     public class HomeController : Controller
     {
-        
+        //OK
         public ActionResult GetStartedPage()
         {
             ViewBag.Message = "Get Started Page ";
 
             return View();
         }       
+        public ActionResult RulesPage()
+        {
+            ViewBag.Message = "Rules Page";
+
+            return View();
+        }
+        public ActionResult StartupSelectionPage()
+        {
+            ViewBag.Message = "Startup Selection Page ";
+
+            return View();
+        }
+
+
+        //Değişebilir controllerlar =>
         public ActionResult CreateAccountPage()
         {
             ViewBag.Message = "Create Account Page ";
@@ -42,18 +57,6 @@ namespace At_Yarisi.Controllers
 
             return View();
         }
-        public ActionResult StartupSelectionPage()
-        {
-            ViewBag.Message = "Startup Selection Page ";
-
-            return View();
-        }
-        public ActionResult RulesPage()
-        {
-            ViewBag.Message = "Rules Page";
-
-            return View();
-        }
-
+        
     }
 }
