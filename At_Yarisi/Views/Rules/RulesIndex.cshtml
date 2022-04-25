@@ -17,7 +17,7 @@
         background-color: darkslategrey;
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 15px 50px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -26,36 +26,21 @@
         border: 600px;
     }
 
-    .kural1 {
-        margin-top: 170px;
-        margin-left: 410px;
-        width: 50%;
-        padding: 0px;
-    }
 
-    .kural {
-        margin-top: 0px;
-        margin-left: 410px;
-        width: 50%;
-        padding: 0px;
-    }
-
-    .paragraf {
-        left: 360px;
-        top: 650px;
-        color: aliceblue;
-    }
-
-    div.relative {
+    .center {
+        margin: 0;
         position: absolute;
-        left: 800px;
-        top: 645px;
+        top: 650px;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        
     }
 </style>
 <body>
-    
+
     <table class="table">
-       
+
         <div class="kural1">
             @foreach (var item in Model)
             {
@@ -70,10 +55,14 @@
                     </p>
 
                 </div>
-                
+
             </tr>
-        }
-            </div>
+            }
+        </div>
+        
+        <div class="center">
+                <a href="/Home/StartupSelectionPage" class="button">Close</a>
+        </div>
 
         </table>
     </body>

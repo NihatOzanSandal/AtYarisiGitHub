@@ -145,6 +145,7 @@
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\RulesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\WalletController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -263,6 +264,7 @@
     <Content Include="Views\Home\LoginPage.cshtml" />
     <Content Include="Views\GirisYap\Login.cshtml" />
     <Content Include="Views\GirisYap\SetMain.cshtml" />
+    <Content Include="Views\Wallet\WalletMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
