@@ -1,0 +1,73 @@
+body {
+    background-image: url("../images/KartliBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.chip {
+    margin-top: 140px;
+    margin-left: 40%;
+    width: 50%;
+    padding: 0px;
+}
+.Wallet {
+    margin-top: 0px;
+    margin-left: 45%;
+    width: 50%;
+    padding: 0px;
+}
+.Btn1 {
+    position: absolute;
+    left: 30%;
+    top: 320px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 295px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn2 {
+    position: absolute;
+    left: 30%;
+    top: 400px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 277px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn3 {
+    position: absolute;
+    left: 30%;
+    top: 480px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 263px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+
+.Btn4 {
+    position: absolute;
+    left: 30%;
+    top: 560px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 229px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 600px;
+}
+

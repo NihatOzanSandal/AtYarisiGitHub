@@ -17,5 +17,14 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
+
+        public ActionResult AddMoney()
+        {
+            return View();
+        }
+
+
+
+
     }
 }

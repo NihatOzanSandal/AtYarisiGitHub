@@ -142,7 +142,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\RulesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WalletController.cs" />
@@ -175,6 +174,8 @@
     <Content Include="Content\MyStyle.css" />
     <Content Include="Content\RulesStyle.css" />
     <Content Include="Content\MainMenuStyle.css" />
+    <Content Include="Content\AddMoney.css" />
+    <Content Include="Content\WalletStyle.css" />
     <Content Include="Content\StartUpSellection.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\toaster.css" />
@@ -257,14 +258,11 @@
     <Content Include="Views\Home\ForgetPassword2Page.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Register.cshtml" />
-    <Content Include="Views\Home\RulesPage.cshtml" />
-    <Content Include="Views\Home\sil.cshtml" />
-    <Content Include="Views\Main\MainMenuPage.cshtml" />
     <Content Include="Views\Rules\RulesIndex.cshtml" />
-    <Content Include="Views\Home\LoginPage.cshtml" />
     <Content Include="Views\GirisYap\Login.cshtml" />
     <Content Include="Views\GirisYap\SetMain.cshtml" />
     <Content Include="Views\Wallet\WalletMenu.cshtml" />
+    <Content Include="Views\Wallet\AddMoney.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
