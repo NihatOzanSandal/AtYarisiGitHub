@@ -22,7 +22,10 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-
+        public ActionResult AddPaymentMethod()
+        {
+            return View();
+        }
 
 
 

@@ -35,7 +35,8 @@ namespace At_Yarisi.Controllers
                 uye.Email = Email;
 
                 return View(uye);
-                //return View("MainMenuPage");
+                //return RedirectToAction("SetMain","GirisYap");
+                return View("MainMenuPage");
             }
             else
             {             
