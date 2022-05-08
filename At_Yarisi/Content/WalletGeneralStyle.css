@@ -16,7 +16,7 @@ input[type="input1"] {
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
-    text-align: center;
+    text-align:center; 
 }
 
 input[type="input2"] {
@@ -80,7 +80,7 @@ input[type="input5"] {
 }
 
 .title {
-    margin-top: 180px;
+    margin-top: 230px;
     margin-left: 670px;
     width: 50%;
     padding: 0px;   
@@ -95,8 +95,8 @@ input[type="input5"] {
 }
 
 input[type="submit"] {
-    margin-top: 40px;
-    margin-left: 59%;
+    margin-top: 0px;
+    margin-left: 197px;
     padding: 12px 38px;
     font-size: 18px;
     text-transform: uppercase;
@@ -123,3 +123,47 @@ input[type="submit"] {
         -moz-transition: 0.5s all;
         -ms-transition: 0.5s all;
     }
+
+.boarder {
+    border: 1px solid #fff;
+}
+
+
+.baslik {
+    margin-top: 230px;
+    margin-left: 620px;
+    width: 50%;
+    padding: 0px;
+}
+
+
+
+input[type="submits"] {
+    margin-top: 0px;
+    margin-left: 70px;
+    padding: 12px 38px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #009864;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+    input[type="submits"]:hover {
+        background: rgba(213, 38, 133, 0.64);
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+

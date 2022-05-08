@@ -175,6 +175,7 @@
     <Content Include="Content\RulesStyle.css" />
     <Content Include="Content\MainMenuStyle.css" />
     <Content Include="Content\AddMoney.css" />
+    <Content Include="Content\WithdrawStyle.css" />
     <Content Include="Content\WalletGeneralStyle.css" />
     <Content Include="Content\WalletStyle.css" />
     <Content Include="Content\StartUpSellection.css" />
@@ -265,6 +266,8 @@
     <Content Include="Views\Wallet\WalletMenu.cshtml" />
     <Content Include="Views\Wallet\AddMoney.cshtml" />
     <Content Include="Views\Wallet\AddPaymentMethod.cshtml" />
+    <Content Include="Views\Wallet\WithdrawYourMoney.cshtml" />
+    <Content Include="Views\Wallet\DeleteChangePaymentMethod.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
