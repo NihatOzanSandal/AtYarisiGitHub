@@ -13,6 +13,8 @@ namespace At_Yarisi.Models.siniflar
         public DbSet<Members> Members { get; set; }
         public DbSet<Rules> Rules { get; set; }
 
+        public DbSet<PaymentMethod> PaymentMethod { get; set; }
+
         /*
         public CONTEXT():base("name=DbContext")
         {

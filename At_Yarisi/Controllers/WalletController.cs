@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+using At_Yarisi.Models.siniflar;
 
 namespace At_Yarisi.Controllers
 {
     public class WalletController : Controller
     {
+        private CONTEXT db;
+        public WalletController()
+        {
+            db = new CONTEXT();
+        }
         // GET: Wallet
         public ActionResult Index()
         {
@@ -31,12 +38,20 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
+        
         [HttpPost]
-        public ActionResult AddPaymentMethod(FormCollection form)
+        public ActionResult AddPaymentMethod(PaymentMethod model)
         {
-            return View();
-        }
+           
+            //model.MemberId = loginOlan.id
 
+
+            db.PaymentMethod.Add(model);
+            db.SaveChanges();
+            return View();
+          
+        }
+        
 
 
         //*************************************************************

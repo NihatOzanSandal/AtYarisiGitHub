@@ -3,10 +3,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 input[type="input1"] {
-    width: 8%;
-    padding: 15px 0px 15px 200px;
+    width: 15%;
+    padding: 15px 0px 15px 10px;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
@@ -16,12 +15,11 @@ input[type="input1"] {
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
-    text-align:center; 
+    text-align: left;
 }
-
 input[type="input2"] {
-    width: 8%;
-    padding: 15px 0px 15px 320px;
+    width: 20%;
+    padding: 15px 0px 15px 10px;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
@@ -31,12 +29,12 @@ input[type="input2"] {
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
-    text-align: center;
+    text-align: left;
 }
 
 input[type="input3"] {
     width: 8%;
-    padding: 15px 0px 15px 50px;
+    padding: 15px 0px 15px 10px;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
@@ -46,7 +44,7 @@ input[type="input3"] {
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
-    text-align: center;
+    text-align: left;
 }
 
 input[type="input4"] {

@@ -3,37 +3,43 @@
     Layout = null;
 }
 
-<form action="/"></form>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AddPaymentMethod</title>
-    <link href="/Content/WalletGeneralStyle.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body>
-    <div>
-        <div class="title">
-            <h1 style="color:whitesmoke;">
-                Add Payment Method
-            </h1>
-        </div>
-        <div>
-            <input value="User Name" name="" type="input1" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" />
-        </div>
-        <div>
-            <input value="Card Number" name="" type="input2" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}" />
-            <input value="Security Code" name="" type="input3" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}" />
-        </div>
-        <div>
-            <h3 class="validationDate">
-                Validation Date
-            </h3>
-            <input value="Month" name="" type="input4" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Month';}" />
-            <input value="Year" name="" type="input5" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Year';}" />
-            <input type="submit" value="Confirm" name="Confirm">
-        </div>
-    </div>
-</body>
+
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>AddPaymentMethod</title>
+        <link href="/Content/WalletGeneralStyle.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <form action="/Wallet/AddPaymentMethod" method="post">
+            <div>
+                <input type="hidden" id="custId" name="MemberId" value="1">
+                <div class="title">
+                    <h1 style="color:whitesmoke;">
+                        Add Payment Method
+                    </h1>
+                </div>
+                <div>
+                    <input value="User Name" name="UserName" type="input1" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" />
+                </div>
+                <div>
+                    <input value="Card Number" name="CardNumber" type="input2" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}" />
+                    <input value="Security Code" name="SecurityCode" type="input3" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}" />
+                </div>
+                <div>
+                    <h3 class="validationDate">
+                        Validation Date
+                    </h3>
+                    <input value="Month" name="Month" type="input4" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Month';}" />
+                    <input value="Year" name="Year" type="input5" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Year';}" />
+                    <input type="submit" value="Confirm">
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
+
+
