@@ -11,6 +11,11 @@ namespace At_Yarisi.Controllers
 {
     public class HomeController : Controller
     {
+        private CONTEXT db;
+        public HomeController()
+        {
+            db = new CONTEXT();
+        }
         //OK
         public ActionResult GetStartedPage()
         {
@@ -29,6 +34,16 @@ namespace At_Yarisi.Controllers
         public ActionResult CreateAccountPage()
         {
             ViewBag.Message = "Create Account Page ";
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateAccountPage(Members model)
+        {
+            ViewBag.Message = "Create Account Page ";
+
+            db.Members.Add(model);
+            db.SaveChanges();          
 
             return View();
         }

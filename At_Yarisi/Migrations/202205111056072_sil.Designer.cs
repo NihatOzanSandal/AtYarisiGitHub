@@ -7,13 +7,13 @@ namespace At_Yarisi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class StringEkledi : IMigrationMetadata
+    public sealed partial class sil : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StringEkledi));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(sil));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205091909328_StringEkledi"; }
+            get { return "202205111056072_sil"; }
         }
         
         string IMigrationMetadata.Source

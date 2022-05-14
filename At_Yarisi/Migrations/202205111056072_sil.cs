@@ -3,7 +3,7 @@ namespace At_Yarisi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Silindi : DbMigration
+    public partial class sil : DbMigration
     {
         public override void Up()
         {
@@ -17,12 +17,12 @@ namespace At_Yarisi.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        MemberId = c.String(nullable: false),
+                        MemberId = c.Int(nullable: false),
                         UserName = c.String(nullable: false),
-                        CardNumber = c.String(nullable: false),
-                        SecurityCode = c.String(nullable: false),
-                        Month = c.String(nullable: false),
-                        Year = c.String(nullable: false),
+                        CardNumber = c.Int(nullable: false),
+                        SecurityCode = c.Int(nullable: false),
+                        Month = c.Int(nullable: false),
+                        Year = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             

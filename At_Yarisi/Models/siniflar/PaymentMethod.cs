@@ -13,7 +13,7 @@ namespace At_Yarisi.Models.siniflar
 
         [Required]
         [Display(Name = "MemberId")]
-        public String MemberId { get; set; }
+        public int MemberId { get; set; }
 
         [Required]
         [Display(Name = "UserName")]
@@ -25,15 +25,15 @@ namespace At_Yarisi.Models.siniflar
 
         [Required]
         [Display(Name = "SecurityCode")]
-        public String SecurityCode { get; set; }
+        public int SecurityCode { get; set; }
 
         [Required]
         [Display(Name = "Month")]
-        public String Month { get; set; }
+        public int Month { get; set; }
 
         [Required]
         [Display(Name = "Year")]
-        public String Year { get; set; }
+        public int Year { get; set; }
 
 
     }

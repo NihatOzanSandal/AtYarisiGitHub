@@ -34,15 +34,23 @@ namespace At_Yarisi.Controllers
                 Members uye = new Members();
                 uye.Email = Email;
 
-                return View(uye);
+
                 //return RedirectToAction("SetMain","GirisYap");
+                
+                return View(uye);
                 return View("MainMenuPage");
+                
+                
+                
             }
             else
-            {             
+            {
+                Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Lütfen Tekrar Deneyin');</script>");
                 return View("Login");
             }
         }
+
+
         //ANA EKRANDAN ÖNCESİ
         /*
         public ActionResult Login(Members ad)

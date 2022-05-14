@@ -38,20 +38,33 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         public ActionResult AddPaymentMethod(PaymentMethod model)
         {
-           
-            //model.MemberId = loginOlan.id
+            
+
+            //if e girmemeli, ne yapmalıyım
+            if (model != null)
+            //if (model.Month!= 0 )
+            {
+
+                //model.MemberId = loginOlan.id
+                db.PaymentMethod.Add(model);
+                db.SaveChanges();
+                Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
+                return View("WalletMenu");
+
+            }
+            else
+            {               
+                Response.Write("<script lang='JavaScript'>alert('Lütfen Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyin');</script>");
+                return View();
+
+            }
 
 
-            db.PaymentMethod.Add(model);
-            db.SaveChanges();
-            return View();
-          
         }
-        
 
 
         //*************************************************************

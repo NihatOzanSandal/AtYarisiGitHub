@@ -160,13 +160,13 @@
     <Compile Include="Migrations\202204121704418_RuleTitleEklendi.Designer.cs">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205091903061_Silindi.cs" />
-    <Compile Include="Migrations\202205091903061_Silindi.Designer.cs">
-      <DependentUpon>202205091903061_Silindi.cs</DependentUpon>
+    <Compile Include="Migrations\202205111056072_sil.cs" />
+    <Compile Include="Migrations\202205111056072_sil.Designer.cs">
+      <DependentUpon>202205111056072_sil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205091909328_StringEkledi.cs" />
-    <Compile Include="Migrations\202205091909328_StringEkledi.Designer.cs">
-      <DependentUpon>202205091909328_StringEkledi.cs</DependentUpon>
+    <Compile Include="Migrations\202205111057441_PaymentDuzeltildi.cs" />
+    <Compile Include="Migrations\202205111057441_PaymentDuzeltildi.Designer.cs">
+      <DependentUpon>202205111057441_PaymentDuzeltildi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\CONTEXT.cs" />
@@ -305,11 +305,11 @@
     <EmbeddedResource Include="Migrations\202204121704418_RuleTitleEklendi.resx">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205091903061_Silindi.resx">
-      <DependentUpon>202205091903061_Silindi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205111056072_sil.resx">
+      <DependentUpon>202205111056072_sil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205091909328_StringEkledi.resx">
-      <DependentUpon>202205091909328_StringEkledi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205111057441_PaymentDuzeltildi.resx">
+      <DependentUpon>202205111057441_PaymentDuzeltildi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
