@@ -20,79 +20,56 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-        
-        public ActionResult SetMain(Members ad, String Email)
+        [HttpPost]
+        public ActionResult Login(Members model)
         {
-            var bilgiler = c.Members.FirstOrDefault(x => x.Email == ad.Email && x.Password == ad.Password);
+            var bilgiler = c.Members.FirstOrDefault(x => x.Email == model.Email && x.Password == model.Password);
             if (bilgiler != null)
             {
-                //YANLIŞSA KONTROLÜ EKLENMELİ
-
                 FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
-                Session["Email"] = bilgiler.Email.ToString();
-
-                Members uye = new Members();
-                uye.Email = Email;
-
-
-                //return RedirectToAction("SetMain","GirisYap");
-                
-                return View(uye);
-                return View("MainMenuPage");
-                
-                
-                
+                Session["Email"] = bilgiler.Email.ToString();               
+                return RedirectToAction("SetMain", "GirisYap");
+                //!!ANA EKRANA KULLANICI ID DÖNMELİ
+                //Paymet Method tablosu 12 char olmalı 
             }
             else
             {
                 Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Lütfen Tekrar Deneyin');</script>");
-                return View("Login");
-            }
-        }
-
-
-        //ANA EKRANDAN ÖNCESİ
-        /*
-        public ActionResult Login(Members ad)
-        {
-            var bilgiler = c.Members.FirstOrDefault(x => x.Email == ad.Email && x.Password == ad.Password);
-            if (bilgiler != null)
-            {
-                FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
-                Session["Email"] = bilgiler.Email.ToString();
-                return RedirectToAction("MainMenuPage", "Main");
-                //return View("MainMenuPage");
-            }
-            else
-            {
                 return View();
             }
         }
-
-        public ActionResult SetMain(Members ad, String Email)
-        {
-            var bilgiler = c.Members.FirstOrDefault(x => x.Email == ad.Email && x.Password == ad.Password);
-            if (bilgiler != null)
-            {
-                FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
-                Session["Email"] = bilgiler.Email.ToString();
-
-                Members uye = new Members();
-                uye.Email = Email;
-
-                return View(uye);
-                //return View("MainMenuPage");
-            }
-            else
-            {
-                return View();
-            }
-
+        public ActionResult SetMain()
+        {            
+            return View();
         }
-
-        */
-
-
-
     }
 }
+
+
+/***************************************************/
+/*
+        var bilgiler = c.Members.FirstOrDefault(x => x.Email == ad.Email && x.Password == ad.Password);
+        if (bilgiler != null)
+        {
+            //YANLIŞSA KONTROLÜ EKLENMELİ
+
+            FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
+            Session["Email"] = bilgiler.Email.ToString();
+
+            Members uye = new Members();
+            uye.Email = Email;
+
+
+            //return RedirectToAction("SetMain","GirisYap");
+
+            return View(uye);
+            return View("MainMenuPage");
+
+
+
+        }
+        else
+        {
+            Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Lütfen Tekrar Deneyin');</script>");
+            return View("Login");
+        }*/

@@ -18,11 +18,15 @@ namespace At_Yarisi.Models.siniflar
         [Required]
         [Display(Name = "UserName")]
         public String UserName { get; set; }
-
+        //CHAR OLMALI 12 KARAKTER
+        //***************
         [Required]
         [Display(Name = "CardNumber")]
-        public String CardNumber { get; set; }
-
+        [MaxLength(12)]
+        [MinLength(12)]
+        public Char CardNumber { get; set; }
+        //DENENMEDİ ŞUAN DB YOK
+        //***************
         [Required]
         [Display(Name = "SecurityCode")]
         public int SecurityCode { get; set; }

@@ -30,8 +30,7 @@
     <!--main-->
     <div class="main-w3l">
         <div class="w3layouts-main">
-            <h2>Login Now</h2>
-            <form action="SetMain">
+            <h2>Login Now</h2>            
                 <div class="mail-form-agile">
                     @using (Html.BeginForm("Login", "GirisYap", FormMethod.Post))
                     {
@@ -43,8 +42,7 @@
                         <div class="clear"></div>
                         <input type="submit" value="Giris Yap" name="login">
                     }
-                </div>
-            </form>
+                </div>           
             <p>Don't Have an Account ?<a href="/Home/CreateAccountPage">Create One Now</a></p>
         </div>
     </div>

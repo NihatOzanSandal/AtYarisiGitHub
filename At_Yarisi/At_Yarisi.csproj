@@ -164,9 +164,9 @@
     <Compile Include="Migrations\202205111056072_sil.Designer.cs">
       <DependentUpon>202205111056072_sil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205111057441_PaymentDuzeltildi.cs" />
-    <Compile Include="Migrations\202205111057441_PaymentDuzeltildi.Designer.cs">
-      <DependentUpon>202205111057441_PaymentDuzeltildi.cs</DependentUpon>
+    <Compile Include="Migrations\202205161219513_DeleteForChar.cs" />
+    <Compile Include="Migrations\202205161219513_DeleteForChar.Designer.cs">
+      <DependentUpon>202205161219513_DeleteForChar.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\CONTEXT.cs" />
@@ -308,8 +308,8 @@
     <EmbeddedResource Include="Migrations\202205111056072_sil.resx">
       <DependentUpon>202205111056072_sil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205111057441_PaymentDuzeltildi.resx">
-      <DependentUpon>202205111057441_PaymentDuzeltildi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205161219513_DeleteForChar.resx">
+      <DependentUpon>202205161219513_DeleteForChar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
