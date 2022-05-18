@@ -8,6 +8,8 @@ namespace At_Yarisi.Models.siniflar
 {
     public class PaymentMethod
     {
+        //Ay ve yıla max değerler atanmalı
+
         [Key]
         public int ID { get; set; }
 
@@ -24,7 +26,7 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "CardNumber")]
         [MaxLength(12)]
         [MinLength(12)]
-        public Char CardNumber { get; set; }
+        public string CardNumber { get; set; }
         //DENENMEDİ ŞUAN DB YOK
         //***************
         [Required]
@@ -33,10 +35,12 @@ namespace At_Yarisi.Models.siniflar
 
         [Required]
         [Display(Name = "Month")]
+        //[MaxLength(12)]
         public int Month { get; set; }
 
         [Required]
         [Display(Name = "Year")]
+        //[MaxLength(9999)]        
         public int Year { get; set; }
 
 

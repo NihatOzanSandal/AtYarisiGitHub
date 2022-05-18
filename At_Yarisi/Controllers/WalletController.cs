@@ -38,39 +38,45 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-       /*
+
         [HttpPost]
         public ActionResult AddPaymentMethod(PaymentMethod model)
         {
-            
-
             //if e girmemeli, ne yapmalıyım
             if (model != null)
+
             //if (model.Month!= 0 )
             {
                 //model.MemberId = loginOlan.id
-                db.PaymentMethod.Add(model);
-                db.SaveChanges();
-                Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
-                return View("WalletMenu");
+                if (model.CardNumber.Length == 12)
+                {
+                    db.PaymentMethod.Add(model);
+                    db.SaveChanges();
+                    Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
+                    return View("WalletMenu");
+                }
+                else
+                {
+                    Response.Write("<script lang='JavaScript'>alert('Kart Numarası 12 hane olmalıdır');</script>");
+                    return View();
+                }
             }
             else
-            {               
+            {
                 Response.Write("<script lang='JavaScript'>alert('Lütfen Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyin');</script>");
                 return View();
             }
         }
-        */
 
-        //*************************************************************
-        public ActionResult WithdrawYourMoney()
-        {
-            return View();
-        }
         public ActionResult DeleteChangePaymentMethod()
         {
             return View();
         }
+        public ActionResult WithdrawYourMoney()
+        {
+            return View();
+        }
+
 
 
 

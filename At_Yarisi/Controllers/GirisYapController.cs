@@ -27,10 +27,18 @@ namespace At_Yarisi.Controllers
             if (bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
-                Session["Email"] = bilgiler.Email.ToString();               
+                //Session["Email"] = bilgiler.Email.ToString();  
+                Session["UserId"] = bilgiler.ID;
+                Session["UserName"] = bilgiler.UserName;
+
+                //c.Members.Remove();
                 return RedirectToAction("SetMain", "GirisYap");
-                //!!ANA EKRANA KULLANICI ID DÖNMELİ
-                //Paymet Method tablosu 12 char olmalı 
+                //!!ANA EKRANA KULLANICI ID DÖNMELİ     ///OK///
+                //Paymet Method tablosu 12 char olmalı      ///string 12 OK///
+                //bilgiler.ID                               ///İle Çekilebilir 
+
+                //session id atıp tutulur ,cookie de tutulur local storage temp de    ///YÖNTEMLERİ MEVCUT Araştır-Ekle/// 
+                
             }
             else
             {

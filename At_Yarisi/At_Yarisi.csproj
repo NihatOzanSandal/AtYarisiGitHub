@@ -160,13 +160,13 @@
     <Compile Include="Migrations\202204121704418_RuleTitleEklendi.Designer.cs">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205111056072_sil.cs" />
-    <Compile Include="Migrations\202205111056072_sil.Designer.cs">
-      <DependentUpon>202205111056072_sil.cs</DependentUpon>
+    <Compile Include="Migrations\202205170952030_sl.cs" />
+    <Compile Include="Migrations\202205170952030_sl.Designer.cs">
+      <DependentUpon>202205170952030_sl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205161219513_DeleteForChar.cs" />
-    <Compile Include="Migrations\202205161219513_DeleteForChar.Designer.cs">
-      <DependentUpon>202205161219513_DeleteForChar.cs</DependentUpon>
+    <Compile Include="Migrations\202205170957539_MaxMinString.cs" />
+    <Compile Include="Migrations\202205170957539_MaxMinString.Designer.cs">
+      <DependentUpon>202205170957539_MaxMinString.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\CONTEXT.cs" />
@@ -305,11 +305,11 @@
     <EmbeddedResource Include="Migrations\202204121704418_RuleTitleEklendi.resx">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205111056072_sil.resx">
-      <DependentUpon>202205111056072_sil.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205170952030_sl.resx">
+      <DependentUpon>202205170952030_sl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205161219513_DeleteForChar.resx">
-      <DependentUpon>202205161219513_DeleteForChar.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205170957539_MaxMinString.resx">
+      <DependentUpon>202205170957539_MaxMinString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

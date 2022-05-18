@@ -16,7 +16,7 @@
     <body>
         <form action="/Wallet/AddPaymentMethod" method="post">
             <div>
-                <input type="hidden" id="custId" name="MemberId" value="1">
+                <input type="hidden" id="custId" name="MemberId" value="@Session["UserId"]">
                 <div class="title">
                     <h1 style="color:whitesmoke;">
                         Add Payment Method
