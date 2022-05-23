@@ -142,6 +142,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RaceController.cs" />
     <Compile Include="Controllers\RulesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WalletController.cs" />
@@ -277,6 +278,7 @@
     <Content Include="Views\Wallet\AddPaymentMethod.cshtml" />
     <Content Include="Views\Wallet\WithdrawYourMoney.cshtml" />
     <Content Include="Views\Wallet\DeleteChangePaymentMethod.cshtml" />
+    <Content Include="Views\Race\Race.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

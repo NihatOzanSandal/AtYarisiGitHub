@@ -26,6 +26,7 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "CardNumber")]
         [MaxLength(12)]
         [MinLength(12)]
+        //16 KARAKTER İLE DEĞİŞTİR
         public string CardNumber { get; set; }
         //DENENMEDİ ŞUAN DB YOK
         //***************

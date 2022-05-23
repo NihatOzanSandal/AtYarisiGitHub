@@ -15,11 +15,7 @@ namespace At_Yarisi.Controllers
         {
             db = new CONTEXT();
         }
-        // GET: Wallet
-        public ActionResult Index()
-        {
-            return View();
-        }
+        // GET: Wallet        
         public ActionResult WalletMenu()
         {
             return View();
@@ -29,10 +25,6 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-
-        //*************************************************************
-
-
 
         public ActionResult AddPaymentMethod()
         {
@@ -70,11 +62,52 @@ namespace At_Yarisi.Controllers
 
         public ActionResult DeleteChangePaymentMethod()
         {
+            //db.PaymentMethod.Remove();
             return View();
         }
         public ActionResult WithdrawYourMoney()
         {
             return View();
+        }
+
+        public ActionResult DeletePaymentMethod(int id)
+        {
+
+            var bilgi = db.PaymentMethod.FirstOrDefault(x => x.MemberId == id);
+            if (bilgi != null)
+            {
+
+                db.PaymentMethod.Remove(bilgi);
+                db.SaveChanges();
+                Response.Write("<script lang='JavaScript'>alert('Kartınız Başarı İle Silinmiştir Yeni Kartınızı Ekleyebilirsiniz');</script>");
+                //return RedirectToAction("AddPaymentMethod");
+                return View("AddPaymentMethod");
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Olmadığından Kartınız Silinemedi Lütfen Önce Kart Ekleyiniz');</script>");
+                //return RedirectToAction("WalletMenu");
+                return View("WalletMenu");
+            }
+
+            /*
+            var b = db.PaymentMethod.Find(id);
+            if (id != 0)
+            {
+                db.PaymentMethod.Remove(b);
+                db.SaveChanges();
+                Response.Write("<script lang='JavaScript'>alert('Kartınız Başarı İle Silinmiştir Yeni Kartınızı Ekleyebilirsiniz');</script>");
+                //return RedirectToAction("AddPaymentMethod");
+                return View("AddPaymentMethod");
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Olmadığından Kartınız Silinemedi Lütfen Önce Kart Ekleyiniz');</script>");
+                //return RedirectToAction("WalletMenu");
+                return View("WalletMenu");
+            }
+            */
+
         }
 
 
