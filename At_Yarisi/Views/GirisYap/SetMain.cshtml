@@ -16,19 +16,23 @@
     <div>
         <div class="kural3">
             <h1 style="color:whitesmoke;">
-                MAIN MENU
-            </h1>
+                Welcome Back Dear @Session["UserName"]
+            </h1>   
+  
         </div>
         <div class="kural1">
-            <h2 style="color:whitesmoke;">
-                WELCOME BACK
-            </h2>
-            <h2 style="color:whitesmoke;">
-                @Session["UserName"]
-            </h2>
+            <h3 style="color:whitesmoke;">
+                Card User Name: @Session["KartAdi"]
+            </h3>
+            <h3 style="color:whitesmoke;">
+                Your Money: @Session["TL"]
+            </h3>
+            <h3 style="color:whitesmoke;">
+                Your Chip : @Session["Chip"]
+            </h3>
         </div>
         <div>
-            <a href="" class="Btn1">Race</a>
+            <a href="/Race/Race" class="Btn1">Race</a>
         </div>
         <div>
             <a href="/Wallet/WalletMenu" class="Btn2">Wallet</a>
@@ -40,7 +44,7 @@
             <a href="" class="Btn4">Settings</a>
         </div>
         <div>
-            <a href="" class="Btn5">Contact</a>
+            <a href="/Home/ContactPage" class="Btn5">Contact</a>
         </div>
     </div>
 </body>

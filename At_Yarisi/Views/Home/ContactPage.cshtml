@@ -1,0 +1,202 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>Blog Web Sitem</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/Content/CanliChatStyle.css" rel="stylesheet" />
+    <link href="/Content/Styles.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(function () {
+            var data = [];
+            var div = "";
+            var kim = "";
+            var ben = "";
+            var kullanici = [];
+
+            var socket = io('https://medipolvize2022nihatozansandal.glitch.me:443');
+
+            socket.emit('baslat', data, function (id) {
+                console.log(id);
+                ben = id;
+            });
+
+            $("#gonder").click(function () {
+                var ad = $("#ad").val();
+                var tx = $("#yazi").val();
+                //onclick="document.getElementById('yazi').value = ''";
+                socket.emit("mesaj", { id: ben, ad: ad, tx: tx });
+            });
+
+            socket.on('sohbet', function (mesaj) {
+                if (mesaj.id == ben) {
+                    div = "right";
+                    kim = "other-message float-right";
+                }
+                else {
+                    div = "left";
+                    kim = "my-message";
+                }
+                //var html = '<div class="message-data text-'+div+'"><span class="message-data-time float-'+div+'"> '+mesaj.ad+'</span></div><div class="message other-message float-'+div+'">'+mesaj.tx+'</div>';
+                var html = '<div class="message-data text-' + div + '"><span class="message-data-time float-' + div + '"> ' + mesaj.ad + '</span></div><div class="message ' + kim + '">' + mesaj.tx + '</div>';
+
+                //$("#sohbetler").append('<div class="balon ' + div + '">' + mesaj.ad + ' / ' + mesaj.tx + '</div> <div style="clear:both"></div>');
+                $("#sohbetler").append(html);
+                var katilimcilar = ' <li class="clearfix"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"><div class="about"><div class="name">' + mesaj.ad + '</div><div class="status"> <i class="fa fa-circle online"></i> online now </div></div></li>';
+                if (mesaj.id != kullanici[mesaj.id]) {
+                    kullanici[mesaj.id] = mesaj.id
+                    $("#katilimcilar").append(katilimcilar);
+                }
+                console.log("sohbet: " + mesaj.id + " / " + mesaj.ad + " / " + mesaj.tx);
+            });
+        });
+
+    </script>
+    <style>
+        .balon {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 75%;
+        }
+
+        .user1 {
+            border: 1px solid #333;
+        }
+
+        .user2 {
+            border: 1px solid red;
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation-->
+    <!-- Page Header-->
+    <!-- Main Content-->
+    <div class="relative">
+        <a href="/GirisYap/SetMain" class="button"> <- </a>
+    </div>
+    <div class="container">
+        <div class="bosluk">
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card chat-app">
+                        <div id="plist" class="people-list">
+                            Enter The Name You Want :<input class="form-control" placeholder="YourName" type="text" id="ad" name="" />
+                            <ul class="list-unstyled chat-list mt-2 mb-0">
+                                <li class="clearfix">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                                    <div class="about">
+                                        <div class="name">
+                                            sample participant
+                                        </div>
+                                        <div class="status"> <i class="fa fa-circle offline"></i> offline </div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div id="katilimcilar"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat">
+                            <div class="chat-header clearfix">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+
+                                        </a>
+
+                                        <div class="chat-about">
+                                            <h6 class="m-b-0">Messages</h6>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <ul class="m-b-0">
+                                    <li class="clearfix">
+                                        <div class="message-data text-right">
+                                            <span class="message-data-time float-right">Ozan</span>
+                                        </div>
+                                        <div class="message other-message float-right">Sample text Hello Dear </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="message-data">
+                                            <span class="message-data-time">Nihat</span>
+                                        </div>
+                                        <div class="message my-message">Sample answer, Hi</div>
+                                    </li>
+                                    <div id="sohbetler"></div>
+                                </ul>
+
+                            </div>
+                            <div class="bosluk">
+                                <footer>
+                                    <div class="container px-4 px-lg-5">
+                                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                                            <div class="col-md-10 col-lg-8 col-xl-7">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                            <div class="chat-message clearfix">
+                                <div class="input-group mb-0">
+
+                                    <input class="form-control" placeholder="Text Here" type="text" id="yazi" name="yazi"
+                                           onfocus="this.value=''" />
+                                    <input type="button" id="gonder" value="Gönder" />
+                                </div>
+                            </div>
+                            <!-- Footer-->
+                            <footer>
+                                <div class="container px-4 px-lg-5">
+                                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                                        <div class="col-md-10 col-lg-8 col-xl-7">
+                                            <div class="small text-center text-muted fst-italic">Copyright &copy; Nihat Ozan Sandal 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>

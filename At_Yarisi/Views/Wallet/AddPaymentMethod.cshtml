@@ -17,16 +17,18 @@
         <form action="/Wallet/AddPaymentMethod" method="post">
             <div>
                 <input type="hidden" id="custId" name="MemberId" value="@Session["UserId"]">
+                <input type="hidden" id="custId" name="Money" value="1000">
+                <input type="hidden" id="custId" name="Chip" value="0">
                 <div class="title">
                     <h1 style="color:whitesmoke;">
                         Add Payment Method
                     </h1>
                 </div>
                 <div>
-                    <input placeholder="User Name" name="UserName" type="input1"/>
+                    <input placeholder="User Name" name="UserName" type="input1" />
                 </div>
                 <div>
-                    <input placeholder="Card Number" name="CardNumber" type="input2"/>
+                    <input placeholder="Card Number" name="CardNumber" type="input2" />
                     <input placeholder="Secrity Code" name="SecurityCode" type="input3" />
                 </div>
                 <div>

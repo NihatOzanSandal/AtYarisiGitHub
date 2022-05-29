@@ -21,24 +21,32 @@ namespace At_Yarisi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(Members model)
+        public ActionResult Login(Members model, PaymentMethod Para)
         {
             var bilgiler = c.Members.FirstOrDefault(x => x.Email == model.Email && x.Password == model.Password);
+            
             if (bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
                 //Session["Email"] = bilgiler.Email.ToString();  
                 Session["UserId"] = bilgiler.ID;
                 Session["UserName"] = bilgiler.UserName;
-
+                var paraBilgisi = c.PaymentMethod.FirstOrDefault(x => x.MemberId == bilgiler.ID);
+                if (paraBilgisi != null)
+                {
+                    Session["TL"] = paraBilgisi.Money;
+                    Session["Chip"] = paraBilgisi.Chip;
+                    Session["KartAdi"] = paraBilgisi.UserName;
+                    return RedirectToAction("SetMain", "GirisYap");
+                }
+                else
+                {
+                    return RedirectToAction("SetMain", "GirisYap");
+                }
                 //c.Members.Remove();
-                return RedirectToAction("SetMain", "GirisYap");
-                //!!ANA EKRANA KULLANICI ID DÖNMELİ     ///OK///
-                //Paymet Method tablosu 12 char olmalı      ///string 12 OK///
-                //bilgiler.ID                               ///İle Çekilebilir 
 
-                //session id atıp tutulur ,cookie de tutulur local storage temp de    ///YÖNTEMLERİ MEVCUT Araştır-Ekle/// 
-                
+                //session id atıp tutulur ,cookie de tutulur local storage temp de 
+
             }
             else
             {
@@ -46,8 +54,9 @@ namespace At_Yarisi.Controllers
                 return View();
             }
         }
-        public ActionResult SetMain()
-        {            
+        public ActionResult SetMain(PaymentMethod Para)
+        {
+            var paraBilgisi = c.PaymentMethod.FirstOrDefault(x => x.ID == Para.ID);
             return View();
         }
     }

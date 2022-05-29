@@ -11,6 +11,7 @@ namespace At_Yarisi.Controllers
     public class WalletController : Controller
     {
         private CONTEXT db;
+
         public WalletController()
         {
             db = new CONTEXT();
@@ -20,46 +21,59 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-
         public ActionResult AddMoney()
         {
             return View();
         }
-
         public ActionResult AddPaymentMethod()
         {
             return View();
         }
-
         [HttpPost]
+
         public ActionResult AddPaymentMethod(PaymentMethod model)
         {
-            //if e girmemeli, ne yapmalıyım
-            if (model != null)
+            //KART EKLENİNCE SESSİON EKLENMELİ
+            bool TekKartKontrol = Session["TL"] == null;
 
-            //if (model.Month!= 0 )
+            if (TekKartKontrol == true)
             {
-                //model.MemberId = loginOlan.id
-                if (model.CardNumber.Length == 12)
+                if (model != null)
                 {
-                    db.PaymentMethod.Add(model);
-                    db.SaveChanges();
-                    Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
-                    return View("WalletMenu");
+                    //model.MemberId = loginOlan.id
+                    if (model.CardNumber.Length == 16)
+                    {
+                        Session["TL"] = model.Money;
+                        Session["Chip"] = model.Chip;
+                        Session["KartAdi"] = model.UserName;
+                        db.PaymentMethod.Add(model);
+                        db.SaveChanges();
+                        Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
+                        return View("WalletMenu");
+                    }
+                    else
+                    {
+                        Response.Write("<script lang='JavaScript'>alert('Kart Numarası 16 hane olmalıdır');</script>");
+                        return View();
+                    }
                 }
                 else
                 {
-                    Response.Write("<script lang='JavaScript'>alert('Kart Numarası 12 hane olmalıdır');</script>");
+                    Response.Write("<script lang='JavaScript'>alert('Lütfen Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyin');</script>");
                     return View();
                 }
+
             }
             else
             {
-                Response.Write("<script lang='JavaScript'>alert('Lütfen Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyin');</script>");
-                return View();
+                Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Bulunmaktadır, Kart Ekleme Başarısız Kart Eklemek İçin Eski Kartınızı Siliniz');</script>");
+                return View("WalletMenu");
             }
-        }
 
+
+
+        }
+        //KULLANILMAYAN
         public ActionResult DeleteChangePaymentMethod()
         {
             //db.PaymentMethod.Remove();
@@ -69,18 +83,20 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-
         public ActionResult DeletePaymentMethod(int id)
         {
 
             var bilgi = db.PaymentMethod.FirstOrDefault(x => x.MemberId == id);
             if (bilgi != null)
             {
-
+                Session.Remove("TL");
+                Session.Remove("Chip");
+                Session.Remove("KartAdi");
                 db.PaymentMethod.Remove(bilgi);
                 db.SaveChanges();
                 Response.Write("<script lang='JavaScript'>alert('Kartınız Başarı İle Silinmiştir Yeni Kartınızı Ekleyebilirsiniz');</script>");
                 //return RedirectToAction("AddPaymentMethod");
+
                 return View("AddPaymentMethod");
             }
             else
@@ -90,7 +106,32 @@ namespace At_Yarisi.Controllers
                 return View("WalletMenu");
             }
 
-            /*
+
+        }
+
+    }
+}
+
+/*
+          var KartSorgu = db.PaymentMethod.FirstOrDefault(x => x.ID == model.MemberId);
+          if (KartSorgu != null)
+          {
+              Session["TL"] = KartSorgu.Money;
+              Session["Chip"] = KartSorgu.Chip;
+              return RedirectToAction("SetMain", "GirisYap");
+          }
+          else
+          {
+              return RedirectToAction("SetMain", "GirisYap");
+          }
+          */
+
+
+
+
+
+
+/*
             var b = db.PaymentMethod.Find(id);
             if (id != 0)
             {
@@ -107,11 +148,3 @@ namespace At_Yarisi.Controllers
                 return View("WalletMenu");
             }
             */
-
-        }
-
-
-
-
-    }
-}

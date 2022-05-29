@@ -7,13 +7,13 @@ namespace At_Yarisi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class MaxMinString : IMigrationMetadata
+    public sealed partial class düzenlemeSil : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MaxMinString));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(düzenlemeSil));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205170957539_MaxMinString"; }
+            get { return "202205251155279_düzenlemeSil"; }
         }
         
         string IMigrationMetadata.Source

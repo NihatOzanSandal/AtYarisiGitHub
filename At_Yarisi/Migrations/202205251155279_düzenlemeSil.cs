@@ -3,9 +3,14 @@ namespace At_Yarisi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MaxMinString : DbMigration
+    public partial class düzenlemeSil : DbMigration
     {
         public override void Up()
+        {
+            DropTable("dbo.PaymentMethods");
+        }
+        
+        public override void Down()
         {
             CreateTable(
                 "dbo.PaymentMethods",
@@ -21,11 +26,6 @@ namespace At_Yarisi.Migrations
                     })
                 .PrimaryKey(t => t.ID);
             
-        }
-        
-        public override void Down()
-        {
-            DropTable("dbo.PaymentMethods");
         }
     }
 }

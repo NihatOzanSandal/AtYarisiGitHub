@@ -24,8 +24,8 @@ namespace At_Yarisi.Models.siniflar
         //***************
         [Required]
         [Display(Name = "CardNumber")]
-        [MaxLength(12)]
-        [MinLength(12)]
+        [MaxLength(16)]
+        [MinLength(16)]
         //16 KARAKTER İLE DEĞİŞTİR
         public string CardNumber { get; set; }
         //DENENMEDİ ŞUAN DB YOK
@@ -43,6 +43,14 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "Year")]
         //[MaxLength(9999)]        
         public int Year { get; set; }
+
+        [Required]
+        [Display(Name = "MemberId")]
+        public double Money { get; set; }
+
+        [Required]
+        [Display(Name = "MemberId")]
+        public double Chip { get; set; }
 
 
     }
