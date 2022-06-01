@@ -65,7 +65,6 @@ namespace At_Yarisi.Controllers
 
             return View();
         }
-
         public ActionResult ContactPage()
         {
             ViewBag.Message = "Contact Page ";
@@ -73,5 +72,11 @@ namespace At_Yarisi.Controllers
             return View();
         }
 
+        public ActionResult TamamlanmamisEkran()
+        {
+            ViewBag.Message = "Contact Page ";
+
+            return View();
+        }
     }
 }

@@ -186,6 +186,7 @@
     <Content Include="Content\AddMoney.css" />
     <Content Include="Content\RaceStyle.css" />
     <Content Include="Content\CanliChatStyle.css" />
+    <Content Include="Content\PastRacesStyle.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Content\WithdrawStyle.css" />
     <Content Include="Content\WalletGeneralStyle.css" />
@@ -274,6 +275,8 @@
     <Content Include="Views\Wallet\DeleteChangePaymentMethod.cshtml" />
     <Content Include="Views\Race\Race.cshtml" />
     <Content Include="Views\Home\ContactPage.cshtml" />
+    <Content Include="Views\Race\PastRacesPage.cshtml" />
+    <Content Include="Views\Home\TamamlanmamisEkran.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

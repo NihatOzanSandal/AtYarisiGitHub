@@ -1,0 +1,43 @@
+﻿@model IEnumerable<At_Yarisi.Models.siniflar.Rules>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PastRacesPage</title>
+    <link href="/Content/PastRacesStyle.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+    <table class="table">
+
+        <div class="kural1">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <div class="kural">
+
+                    <h2 style="color:yellow;">
+                        @Html.DisplayFor(modelItem => item.RuleTitle)
+                    </h2>
+                    <p class="paragraf">
+                        @Html.DisplayFor(modelItem => item.Rule)
+                    </p>
+
+                </div>
+
+            </tr>
+        }
+            </div>
+
+            <div class="center">
+                <a href="/Home/StartupSelectionPage" class="button">Close</a>
+            </div>
+
+        </table>
+    </body>
+</html>

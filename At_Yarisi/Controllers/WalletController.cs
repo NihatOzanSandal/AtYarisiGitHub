@@ -30,7 +30,6 @@ namespace At_Yarisi.Controllers
             return View();
         }
         [HttpPost]
-
         public ActionResult AddPaymentMethod(PaymentMethod model)
         {
             //KART EKLENİNCE SESSİON EKLENMELİ
@@ -125,12 +124,6 @@ namespace At_Yarisi.Controllers
               return RedirectToAction("SetMain", "GirisYap");
           }
           */
-
-
-
-
-
-
 /*
             var b = db.PaymentMethod.Find(id);
             if (id != 0)

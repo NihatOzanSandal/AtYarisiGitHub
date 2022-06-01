@@ -1,0 +1,27 @@
+body {
+    background-image: url("../images/KartliBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button {
+    background-color: darkslategrey;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    left: 600px;
+    border: 600px;
+}
+
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
