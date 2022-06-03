@@ -20,11 +20,26 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-        public ActionResult PastRacesPage()
+        public ActionResult PastRacesPage(int id)
         {
-            ViewBag.Message = "Past Races Page ";
+            //SORU BİR BU KOŞULA UYAN BÜTÜN SORGULARI NASIL ÇEKERİM
 
-            return View(db.Rules.ToList());
+            var bilgi = db.Bets.Where(x => x.MemberId == id);
+            //var bilgi = db.Bets.Find(x => x.MemberId == id);
+            if (bilgi != null)
+            {
+                //Session["AmountOfBet"] = bilgi.AmountOfBet;
+                //Session["HorseId"] = bilgi.HorseId;
+                //Session["EarningAmount"] = bilgi.EarningAmount;
+
+                //SORU 2 BURDA BETS YERİNE BİLGİ Mİ KULLANILMALI
+                return View(bilgi.ToList());
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Geçmiş Yarışınız Bulunmamakta');</script>");
+                return View("SetMain");
+            }            
         }
     }
 }

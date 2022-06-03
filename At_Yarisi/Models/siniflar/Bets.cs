@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace At_Yarisi.Models.siniflar
+{
+    public class Bets
+    {
+        [Key]
+        public int ID { get; set; }
+
+        [Required]
+        [Display(Name = "MemberId")]
+        public int MemberId { get; set; }
+
+        [Required]
+        [Display(Name = "AmountOfBet")]
+        public double AmountOfBet { get; set; }
+
+        [Required]
+        [Display(Name = "EarningAmount")]
+        public double EarningAmount { get; set; }
+
+        [Required]
+        [Display(Name = "HorseId")]
+        public double HorseId { get; set; }
+
+        [Required]
+        [Display(Name = "RaceId")]
+        public int RaceId { get; set; }
+
+
+
+    }
+}

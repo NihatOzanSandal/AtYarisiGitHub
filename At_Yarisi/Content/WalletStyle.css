@@ -4,13 +4,13 @@ body {
     background-size: cover;
 }
 .chip {
-    margin-top: 120px;
+    margin-top: 5%;
     margin-left: 40%;
     width: 50%;
     padding: 0px;
 }
 .Wallet {
-    margin-top: 0px;
+    margin-top: 1%;
     margin-left: 45%;
     width: 50%;
     padding: 0px;
@@ -18,10 +18,10 @@ body {
 .Btn1 {
     position: absolute;
     left: 30%;
-    top: 320px;
+    top: 41%;
     background-color: #000000;
     color: white;
-    padding: 15px 295px;
+    padding: 1% 18%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -32,10 +32,10 @@ body {
 .Btn2 {
     position: absolute;
     left: 30%;
-    top: 400px;
+    top: 51%;
     background-color: #000000;
     color: white;
-    padding: 15px 277px;
+    padding: 1% 17%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -46,10 +46,10 @@ body {
 .Btn3 {
     position: absolute;
     left: 30%;
-    top: 480px;
+    top: 61%;
     background-color: #000000;
     color: white;
-    padding: 15px 263px;
+    padding: 1% 16%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -60,10 +60,10 @@ body {
 .Btn4 {
     position: absolute;
     left: 30%;
-    top: 560px;
+    top: 71%;
     background-color: #000000;
     color: white;
-    padding: 15px 229px;
+    padding: 1% 14%;
     text-align: center;
     text-decoration: none;
     display: inline-block;

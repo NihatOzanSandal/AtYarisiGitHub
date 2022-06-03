@@ -168,7 +168,16 @@
     <Compile Include="Migrations\202205251201063_DoublePara.Designer.cs">
       <DependentUpon>202205251201063_DoublePara.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206010918288_BetTablosuEklendi.cs" />
+    <Compile Include="Migrations\202206010918288_BetTablosuEklendi.Designer.cs">
+      <DependentUpon>202206010918288_BetTablosuEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206011215123_ratioyerineId.cs" />
+    <Compile Include="Migrations\202206011215123_ratioyerineId.Designer.cs">
+      <DependentUpon>202206011215123_ratioyerineId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\siniflar\Bets.cs" />
     <Compile Include="Models\siniflar\CONTEXT.cs" />
     <Compile Include="Models\siniflar\Members.cs" />
     <Compile Include="Models\siniflar\PaymentMethod.cs" />
@@ -187,6 +196,7 @@
     <Content Include="Content\RaceStyle.css" />
     <Content Include="Content\CanliChatStyle.css" />
     <Content Include="Content\PastRacesStyle.css" />
+    <Content Include="Content\SettingsStyle.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Content\WithdrawStyle.css" />
     <Content Include="Content\WalletGeneralStyle.css" />
@@ -277,6 +287,7 @@
     <Content Include="Views\Home\ContactPage.cshtml" />
     <Content Include="Views\Race\PastRacesPage.cshtml" />
     <Content Include="Views\Home\TamamlanmamisEkran.cshtml" />
+    <Content Include="Views\Home\SettingsPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205251201063_DoublePara.resx">
       <DependentUpon>202205251201063_DoublePara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206010918288_BetTablosuEklendi.resx">
+      <DependentUpon>202206010918288_BetTablosuEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206011215123_ratioyerineId.resx">
+      <DependentUpon>202206011215123_ratioyerineId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -18,8 +18,8 @@ div.relative {
 
 .BtnLogin {
     position: absolute;
-    left: 370px;
-    top: 650px;
+    left: 20%;
+    top: 80%;
     background-color: #000000;
     color: white;
     padding: 15px 32px;
@@ -32,8 +32,8 @@ div.relative {
 
 .BtnRules {
     position: absolute;
-    left: 796px;
-    top: 650px;
+    left: 47%;
+    top: 80%;
     background-color: #000000;
     color: white;
     padding: 15px 32px;
@@ -49,8 +49,8 @@ div.relative {
 
 .BtnStartRiskFree {
     position: absolute;
-    left: 1210px;
-    top: 650px;
+    left: 71%;
+    top: 80%;
     background-color: #000000;
     color: white;
     padding: 15px 32px;

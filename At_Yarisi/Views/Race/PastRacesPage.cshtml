@@ -1,4 +1,4 @@
-﻿@model IEnumerable<At_Yarisi.Models.siniflar.Rules>
+﻿@model IEnumerable<At_Yarisi.Models.siniflar.Bets>
 @{
     Layout = null;
 }
@@ -16,28 +16,32 @@
     <table class="table">
 
         <div class="kural1">
+            <h1 style="color:aliceblue">Your Last 5 Race : </h1>
+
             @foreach (var item in Model)
             {
             <tr>
+                
                 <div class="kural">
-
-                    <h2 style="color:yellow;">
-                        @Html.DisplayFor(modelItem => item.RuleTitle)
-                    </h2>
-                    <p class="paragraf">
-                        @Html.DisplayFor(modelItem => item.Rule)
-                    </p>
-
+                    <hr />
+                    <a class="a1" style="color:yellow;">
+                        Your Bet : @Html.DisplayFor(modelItem => item.AmountOfBet) Chip
+                    </a>
+                    <a class="a2" style="color:yellow;">
+                        You Got : @Html.DisplayFor(modelItem => item.EarningAmount) Chip
+                    </a>
+                    <a class="a3" style="color:yellow;">
+                        The Horse You Played : @Html.DisplayFor(modelItem => item.HorseId) Number
+                    </a>
+                    <hr />
                 </div>
-
             </tr>
-        }
+             }
             </div>
 
             <div class="center">
-                <a href="/Home/StartupSelectionPage" class="button">Close</a>
+                <a href="/GirisYap/SetMain" class="button">Close</a>
             </div>
-
         </table>
     </body>
 </html>

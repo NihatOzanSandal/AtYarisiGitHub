@@ -5,13 +5,13 @@ body {
 }
 input[type="input1"] {
     width: 15%;
-    padding: 15px 0px 15px 10px;
+    padding: 1% 0% 1% 1%;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
     color: #fff;
-    margin-top: 0px;
-    margin-left: 480px;
+    margin-top: 0%;
+    margin-left: 29%;
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
@@ -19,13 +19,13 @@ input[type="input1"] {
 }
 input[type="input2"] {
     width: 20%;
-    padding: 15px 0px 15px 10px;
+    padding: 1% 0% 1% 1%;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
     color: #fff;
     margin-top: 40px;
-    margin-left: 480px;
+    margin-left: 29%;
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
@@ -34,13 +34,13 @@ input[type="input2"] {
 
 input[type="input3"] {
     width: 8%;
-    padding: 15px 0px 15px 10px;
+    padding: 1% 0% 1% 1%;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
     color: #fff;
     margin-top: 0%;
-    margin-left: 20px;
+    margin-left: 1%;
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
@@ -49,13 +49,13 @@ input[type="input3"] {
 
 input[type="input4"] {
     width: 8%;
-    padding: 15px 0px 15px 10px;
+    padding: 1% 0% 1% 1%;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
     color: #fff;
     margin-top: 0px;
-    margin-left: 480px;
+    margin-left: 29%;
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
@@ -64,13 +64,13 @@ input[type="input4"] {
 
 input[type="input5"] {
     width: 8%;
-    padding: 15px 0px 15px 10px;
+    padding: 1% 0% 1% 1%;
     border: 1px solid #fff;
     outline: none;
     font-size: 14px;
     color: #fff;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 0%;
+    margin-left: 0%;
     font-family: 'Roboto', sans-serif;
     background: url("") no-repeat 10px 11px;
     background-size: 24px;
@@ -78,23 +78,23 @@ input[type="input5"] {
 }
 
 .title {
-    margin-top: 230px;
-    margin-left: 670px;
+    margin-top: 12%;
+    margin-left: 40%;
     width: 50%;
     padding: 0px;   
 }
 
 .validationDate {
     color: whitesmoke;
-    margin-top: 25px;
-    margin-left: 480px;
+    margin-top: 2%;
+    margin-left: 29%;
     width: 50%;
     padding: 0px;
 }
 
 input[type="submit"] {
     margin-top: 0px;
-    margin-left: 197px;
+    margin-left: 8%;
     padding: 12px 38px;
     font-size: 18px;
     text-transform: uppercase;

@@ -72,6 +72,12 @@ namespace At_Yarisi.Controllers
             return View();
         }
 
+        public ActionResult SettingsPage()
+        {
+            ViewBag.Message = "Settings Page ";
+
+            return View();
+        }
         public ActionResult TamamlanmamisEkran()
         {
             ViewBag.Message = "Contact Page ";

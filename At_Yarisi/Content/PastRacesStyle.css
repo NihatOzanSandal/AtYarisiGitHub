@@ -16,12 +16,37 @@ body {
     border: 600px;
 }
 
-
 .center {
     margin: 0;
     position: absolute;
-    top: 650px;
+    top: 80%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.kural1 {
+    margin-top: 170px;
+    margin-left: 30%;
+    width: 50%;
+    padding: 0px;
+}
+
+.kural {
+    margin-top: 0px;
+    margin-left: 25%;
+    width: 50%;
+    padding: 0px;
+}
+
+.a1 {
+    margin-left: 100px;
+}
+
+.a2 {
+    margin-left: 60px;
+}
+
+.a3 {
+    margin-left: 60px;
 }
