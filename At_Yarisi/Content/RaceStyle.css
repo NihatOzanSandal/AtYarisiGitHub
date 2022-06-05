@@ -1,25 +1,25 @@
 body {
-    background-image: url("../images/KartliBg.png");
+    background-image: url("../images/bg3.jpg    ");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.BigBox {
+.konum {
     margin-top: 5%;
-    margin-left: 18%;
-    width: 1080px;
-    height: 600px;
-    border: 2px solid #000;
-    background-color: rgb(39 26 26 / 0.91);
+    margin-left: 180%;    
 }
 
+div.relative {
+    position: relative;
+    left: 24%;
+}
 .kutu {
     margin-top: 0%;
-    margin-left: 18%;
-    width: 400px;
-    height: 600px;
-    border: 2px solid #000;
-    background-color: rgb(39 26 26 / 0.91);
+    margin-left: 1%;
+    width: 0px;
+    height: 0px;
+    border: 20px solid #000;
+    background-color: rgb(105,105,105);
 }
 
 .kutu2 {
@@ -32,44 +32,49 @@ body {
 }
 
 .inputPadding1 {
-    margin-top: 150px;
+    margin-top: 10%;
     margin-left: 180px;
     padding: 12px 38px;
 }
 
 .inputPadding {
-    margin-top: 4px;
-    margin-left: 180px;
+    margin-top: 2%;
+    margin-left: 10px;
     padding: 12px 38px;
 }
 
 .inputConfirmPadding {
-    margin-top: 40px;
-    margin-left: 0px;
+    margin-top: 0px;
+    margin-left: 13%;
     padding: 12px 38px;
 }
 
 .inputConfirmPadding1 {
-    margin-top: 10px;
-    margin-left: 0px;
+    margin-top: 1%;
+    margin-left: 16%;
     padding: 12px 38px;
 }
 
+.inputConfirmPadding2 {
+    margin-top: 0%;
+    margin-left:25%;
+    padding: 12px 38px;
+}
 .chosenJokey {
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 17%;
     padding: 0px 0px;
 }
 
 .CountDownTimer {
     margin-top: 0px;
-    margin-left: 30%;
+    margin-left: 40%;
     padding: 0px 0px;
 }
 
 input[type="submit"] {
     margin-top: 0px;
-    margin-left: 109px;
+    margin-left: 10px;
     padding: 12px 100px;
     text-align: left;
     font-size: 18px;
@@ -192,4 +197,92 @@ input[type="submit"] {
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     padding: 12px 10px;
+}
+.button7 {
+    margin-top: 0px;
+    margin-left: 1px;
+    text-align: left;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgb(39 26 26 / 0.91);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    padding: 12px 10px;
+}
+
+
+
+/****/
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+    .custom-select select {
+        display: none; /*hide original SELECT element:*/
+    }
+
+.select-selected {
+    background-color: black;
+}
+
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.kutum {
+    background-color: lightgrey;
+    width: 30px;
+    border: 15px solid green;
+    padding: 0px;
+    margin: 20px;
 }

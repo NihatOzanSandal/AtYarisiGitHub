@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Mvc;
 using At_Yarisi.Models.siniflar;
 
 namespace At_Yarisi.Controllers
@@ -18,7 +17,32 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult Race()
         {
-            return View();
+            
+                var bilgi = db.Horse.Where(x => x.HorseName != "BoşIsim");
+                return View(bilgi.ToList());
+                    
+        }
+        [HttpPost]
+        public ActionResult Race(Horse model)
+        {
+           
+            var bilgiler = db.Horse.FirstOrDefault(x => x.HorseName == model.HorseName);
+            
+
+            if (bilgiler != null)
+            {
+                Session["HorseName"] = bilgiler.HorseName;
+                Session["HorseRatio"] = bilgiler.HorseRatio;
+                Session["HorseNumber"] = bilgiler.HorseNumber;
+                //db.Horse.Add(model);
+                //db.SaveChanges();
+                return View();
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Lütfen Girdiğiniz Bilgileri Kontrol Edip Tekrar Deneyin');</script>");
+                return View();
+            }
         }
         public ActionResult PastRacesPage(int id)
         {
@@ -39,7 +63,12 @@ namespace At_Yarisi.Controllers
             {
                 Response.Write("<script lang='JavaScript'>alert('Geçmiş Yarışınız Bulunmamakta');</script>");
                 return View("SetMain");
-            }            
+            }
+        }
+        public ActionResult HorseRace()
+        {    
+            return View();
+
         }
     }
 }

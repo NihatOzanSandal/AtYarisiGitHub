@@ -78,6 +78,7 @@ namespace At_Yarisi.Controllers
             //db.PaymentMethod.Remove();
             return View();
         }
+        /*------------*/
         public ActionResult WithdrawYourMoney()
         {
             return View();

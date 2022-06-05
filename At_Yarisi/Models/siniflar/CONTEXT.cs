@@ -16,6 +16,7 @@ namespace At_Yarisi.Models.siniflar
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
 
         public DbSet<Bets> Bets { get; set; }
+        public DbSet<Horse> Horse { get; set; }
 
         /*
         public CONTEXT():base("name=DbContext")
