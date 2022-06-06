@@ -12,112 +12,130 @@
     <link href="/Content/RaceStyle.css" rel="stylesheet" type="text/css" media="all">
 
     <script src="~/Scripts/script.js"></script>
+
     <script>
+
         var num_lap = 1, results = [], funds = @Session["Chip"], bethorse, amount;
+        document.getElementById('GelirTutar').value = funds;
     </script>
 </head>
 <body>
-    <div id="horse1" class="horse standRight">
-        <div class="rider">
-            <div class="head">
-            </div>
-            <div class="body">
-            </div>
-        </div>
-    </div>
-
-
-    <div id="horse2" class="horse standRight">
-        <div class="rider">
-            <div class="head">
-            </div>
-            <div class="body">
+    <div>
+        <div id="horse1" class="horse standRight">
+            <div class="rider">
+                <div class="head">
+                </div>
+                <div class="body">
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div id="horse3" class="horse standRight">
-        <div class="rider">
-            <div class="head">
-            </div>
-            <div class="body">
-            </div>
-        </div>
-    </div>
-
-
-    <div id="horse4" class="horse standRight">
-        <div class="rider">
-            <div class="head">
-            </div>
-            <div class="body">
+        <div id="horse2" class="horse standRight">
+            <div class="rider">
+                <div class="head">
+                </div>
+                <div class="body">
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="track">
-        <div id="startline">
-        </div>
-        <div class="inner">
-            <form action="/Race/Race" method="post">
-
-                <!--Sayfa Çalışmalı sonrasın da post olmalı ve veriler o şekilde gönderilmeli-->
-                <!--Kazanılan yada kaybedilen değer eski değer ile controller kısmında toplanmalı-->
-
-                <button id="start">Event Starts İn : 50 Second</button><!-- Make it a button -->
-                <div id="bet">
-                    <input type="hidden" id="custId" name="MemberId" value="@Session["UserId"]">
-                    <input type="hidden" id="custId" name="RaceId" value="@Session["MevcutYarisId"]">
-                    <input type="hidden" id="custId" name="EarningAmount" value="100">
-                    <p>You currently have <span id="funds">@Session["Chip"]</span></p>
-                    <label>Bet Amount (Chip)</label>
-                    <input type="number" id="amount" value="0" name="AmountOfBet"><!-- Add type and default value -->
-                    <label>Bet on horse:</label>
-                    <select id="bethorse" name="HorseId">
-                        <option value="1">White</option>
-                        <option value="2">Blue</option>
-                        <option value="3">Green</option>
-                        <option value="4">Brown</option>
-                    </select>
-
-                    <input type="hidden" id="num_lap" name="num_lap" value="1">
-
-                    <button id="start" type="submit">Confirm Your Bet</button>
-            </form>
+        <div id="horse3" class="horse standRight">
+            <div class="rider">
+                <div class="head">
+                </div>
+                <div class="body">
+                </div>
+            </div>
         </div>
 
-        <img src="~/images/images/tree.png" class="tree" />
 
-        <br>
-        <table id="results">
-            <thead>
-                <tr>
-                    <th>Results</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1st</td>
-                    <td class="result horse1"></td>
-                </tr>
-                <tr>
-                    <td>2nd</td>
-                    <td class="result horse2"></td>
-                </tr>
-                <tr>
-                    <td>3rd</td>
-                    <td class="result horse3"></td>
-                </tr>
-                <tr>
-                    <td>4th</td>
-                    <td class="result horse4"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div id="horse4" class="horse standRight">
+            <div class="rider">
+                <div class="head">
+                </div>
+                <div class="body">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="track">
+            <div id="startline">
+            </div>
+            <div class="inner">
+                <form action="/Race/Race" method="post">
+
+                    <!--Sayfa Çalışmalı sonrasın da post olmalı ve veriler o şekilde gönderilmeli-->
+                    <!--Kazanılan yada kaybedilen değer eski değer ile controller kısmında toplanmalı-->
+                    <!--<button id="start">Event Starts İn : 50 Second</button> Make it a button -->
+
+                    <button id="start">Confirm Your Bet And Start</button>
+                    <div id="bet">
+                        <!--MemberId-->
+                        <input type="hidden" id="custId" name="MemberId" value="@Session["UserId"]">
+                        <!--RaceId-->
+                        <input type="hidden" id="custId" name="RaceId" value="@Session["MevcutYarisId"]">
+
+                        <p>You currently have <span id="funds">@Session["Chip"]</span></p>
+                        <label>Bet Amount (Chip)</label>
+                        <!--AmountOfBet-->
+                        <input type="number" id="amount" value="0" name="AmountOfBet"><!-- Add type and default value -->
+                        <label>Bet on horse:</label>
+                        <!--HorseId-->
+                        <select id="bethorse" name="HorseId">
+                            <option value="1">White</option>
+                            <option value="2">Blue</option>
+                            <option value="3">Green</option>
+                            <option value="4">Brown</option>
+                        </select>
+                        <!--Tur Sayısı (Değiştirme)-->
+                        <input type="hidden" id="num_lap" name="num_lap" value="1">
+                        <!--EarningAmount!!!!!
+                        <input type="hidden" id="Deger" name="EarningAmount" value="alert('DegerDon');">
+                            -->
+                        <!--!!!!!!!!!!!!!!!!!!!!!JavaScript kısmından amount veya kazanan ıd çekilmeli!!!!!!!!!!!!!!!!!!!!!!-->
+                        <!--Deneme Bölgesi Başlangıç-->
+                        
+                        <input type="hidden" id="GelirTutar" name="GelirTutar" value="">
+
+                        <!--Deneme Bölgesi Bitiş-->
+
+                        <button id="start" type="submit">Click Here After Race to Collect</button>
+                </form>
+            </div>
+
+            <img src="/images/images/tree.png" class="tree" />
+
+            <br>
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th>Results</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st</td>
+                        <td class="result horse1"></td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td class="result horse2"></td>
+                    </tr>
+                    <tr>
+                        <td>3rd</td>
+                        <td class="result horse3"></td>
+                    </tr>
+                    <tr>
+                        <td>4th</td>
+                        <td class="result horse4"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

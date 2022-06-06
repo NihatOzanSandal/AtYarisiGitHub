@@ -32,6 +32,9 @@ namespace At_Yarisi.Controllers
             
             if (bilgiler != null)
             {
+                //var file = Request.Form["GelirTutar"];
+
+                //model.EarningAmount =
                 model.RaceId += 1;
                 db.Bets.Add(model);
                 db.SaveChanges();
