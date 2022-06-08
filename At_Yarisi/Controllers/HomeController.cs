@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using At_Yarisi.Models.siniflar;
 using System.Web.Security;
-
 namespace At_Yarisi.Controllers
 {
     public class HomeController : Controller
@@ -17,7 +16,6 @@ namespace At_Yarisi.Controllers
         {
             db = new CONTEXT();
         }
-        //OK
         public ActionResult GetStartedPage()
         {
             ViewBag.Message = "Get Started Page ";
@@ -30,8 +28,6 @@ namespace At_Yarisi.Controllers
 
             return View();
         }
-
-        //Değişebilir controllerlar =>
         public ActionResult CreateAccountPage()
         {
             ViewBag.Message = "Create Account Page ";
@@ -59,6 +55,31 @@ namespace At_Yarisi.Controllers
         public ActionResult ForgetPasswordPage()
         {
             ViewBag.Message = "Forget Password Screen-1 ";
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ForgetPasswordPage(Members model)
+        {
+            //string Soru ="";
+            var bilgi = db.Members.Where(x => x.UserName == model.UserName);
+            var bilgi2 = db.Members.Where(x => x.Email == model.Email);
+            if (bilgi != null && bilgi2!= null)
+            {
+                //model.SecurityQuestion = 
+
+                return View(bilgi.ToList());
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Bir Hata Oluştu Lütfen Bilgilerinizi Kontrol Edip Tekrar Deneyiniz.');</script>");
+                return View("SetMain");
+            }
+        }
+        //YAPIM AŞAMASINDA MAİL
+        public ActionResult SendMailPage()
+        {
+            ViewBag.Message = "Create Account Second Page ";
 
             return View();
         }
