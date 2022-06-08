@@ -30,7 +30,7 @@ namespace At_Yarisi.Controllers
                 Session.Remove("UserName");
                 Session["UserName"] = isim;
                 Response.Write("<script lang='JavaScript'>alert('Kullanıcı Adı Başarı İle Değiştirildi');</script>");
-                return View("SetMain");
+                return View("/Views/GirisYap/SetMain.cshtml");
             }
             else
             {

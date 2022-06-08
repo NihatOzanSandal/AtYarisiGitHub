@@ -343,8 +343,6 @@
     <Content Include="Views\Race\PastRacesPage.cshtml" />
     <Content Include="Views\Home\TamamlanmamisEkran.cshtml" />
     <Content Include="Views\Home\SettingsPage.cshtml" />
-    <Content Include="Views\Race\HorseRace.cshtml" />
-    <Content Include="Views\Race\HorseRaceJs.cshtml" />
     <Content Include="Views\Settings\ChangeName.cshtml" />
     <Content Include="Views\Settings\ChangeEmail.cshtml" />
     <Content Include="Views\Settings\ChangePassword.cshtml" />
