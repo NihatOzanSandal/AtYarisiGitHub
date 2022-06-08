@@ -145,6 +145,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RaceController.cs" />
     <Compile Include="Controllers\RulesController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\WalletController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,6 +185,14 @@
     <Compile Include="Migrations\202206032048338_atNoEklendi.cs" />
     <Compile Include="Migrations\202206032048338_atNoEklendi.Designer.cs">
       <DependentUpon>202206032048338_atNoEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206071045281_CardIdEklendi.cs" />
+    <Compile Include="Migrations\202206071045281_CardIdEklendi.Designer.cs">
+      <DependentUpon>202206071045281_CardIdEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206081049396_totaleklendi.cs" />
+    <Compile Include="Migrations\202206081049396_totaleklendi.Designer.cs">
+      <DependentUpon>202206081049396_totaleklendi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\Bets.cs" />
@@ -340,7 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AtYarisi\" />
+    <Folder Include="Views\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -382,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206032048338_atNoEklendi.resx">
       <DependentUpon>202206032048338_atNoEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206071045281_CardIdEklendi.resx">
+      <DependentUpon>202206071045281_CardIdEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206081049396_totaleklendi.resx">
+      <DependentUpon>202206081049396_totaleklendi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

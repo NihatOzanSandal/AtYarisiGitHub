@@ -20,8 +20,8 @@ namespace At_Yarisi.Models.siniflar
         public double AmountOfBet { get; set; }
 
         [Required]
-        [Display(Name = "EarningAmount")]
-        public double EarningAmount { get; set; }
+        [Display(Name = "TotalAmount")]
+        public double TotalAmount { get; set; }
 
         [Required]
         [Display(Name = "HorseId")]
@@ -31,6 +31,9 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "RaceId")]
         public int RaceId { get; set; }
 
+        [Required]
+        [Display(Name = "CardId")]
+        public int CardId { get; set; }
 
 
     }

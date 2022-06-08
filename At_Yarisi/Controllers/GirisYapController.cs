@@ -34,6 +34,7 @@ namespace At_Yarisi.Controllers
                 var paraBilgisi = c.PaymentMethod.FirstOrDefault(x => x.MemberId == bilgiler.ID);
                 if (paraBilgisi != null)
                 {
+                    Session["CardId"] = paraBilgisi.ID;
                     Session["TL"] = paraBilgisi.Money;
                     Session["Chip"] = paraBilgisi.Chip;
                     Session["KartAdi"] = paraBilgisi.UserName;

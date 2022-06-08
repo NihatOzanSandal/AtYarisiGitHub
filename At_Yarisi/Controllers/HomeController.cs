@@ -43,8 +43,10 @@ namespace At_Yarisi.Controllers
             ViewBag.Message = "Create Account Page ";
 
             db.Members.Add(model);
-            db.SaveChanges();          
+            db.SaveChanges();
 
+            Response.Write("<script lang='JavaScript'>alert('Hesap Oluşturma Başarılı Kazanmaya Bir Adım Daha Yaklaştınız :) ');</script>");
+            //LOGİN SAYFASINA DÖNMELİ Return View
             return View();
         }
         public ActionResult CreateAccount2Page()
