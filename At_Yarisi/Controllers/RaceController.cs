@@ -29,7 +29,7 @@ namespace At_Yarisi.Controllers
             }
             else
             {
-                Response.Write("<script lang='JavaScript'>alert('Geçmiş Yarışınız Bulunmamakta');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Member Id Çekmede Hata Oluştu Lütfen tekrar Login Olunuz');</script>");
                 return View("SetMain");
             }
         }
@@ -49,35 +49,44 @@ namespace At_Yarisi.Controllers
 
             var bilgiler = db.Members.FirstOrDefault(x => x.ID == model.MemberId);
             var CardUser = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
-            if (CardUser.Chip < model.AmountOfBet || model.AmountOfBet < 0)
+            if (model.MemberId == 0)
             {
-                Response.Write("<script lang='JavaScript'>alert('Please Check Your Amount');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Lütfen Login Olun ve Tekrar Deneyin');</script>");
                 return View();
             }
             else
             {
 
-
-                if (bilgiler != null)
+                if (CardUser.Chip < model.AmountOfBet || model.AmountOfBet < 0)
                 {
-
-                    CardUser.Chip = model.TotalAmount;
-
-                    model.RaceId += 1;
-                    db.Bets.Add(model);
-                    db.SaveChanges();
-
-                    Session.Remove("Chip");
-                    Session["Chip"] = model.TotalAmount;
-                    //db.Horse.Add(model);
-                    //db.SaveChanges();
-
+                    Response.Write("<script lang='JavaScript'>alert('Please Check Your Amount');</script>");
                     return View();
                 }
                 else
                 {
-                    Response.Write("<script lang='JavaScript'>alert('Member Id Almada Sorun Yaşandı Tekrar Login Olunuz ');</script>");
-                    return View();
+
+
+                    if (bilgiler != null)
+                    {
+
+                        CardUser.Chip = model.TotalAmount;
+
+                        model.RaceId += 1;
+                        db.Bets.Add(model);
+                        db.SaveChanges();
+
+                        Session.Remove("Chip");
+                        Session["Chip"] = model.TotalAmount;
+                        //db.Horse.Add(model);
+                        //db.SaveChanges();
+
+                        return View();
+                    }
+                    else
+                    {
+                        Response.Write("<script lang='JavaScript'>alert('Member Id Almada Sorun Yaşandı Tekrar Login Olunuz ');</script>");
+                        return View();
+                    }
                 }
             }
 

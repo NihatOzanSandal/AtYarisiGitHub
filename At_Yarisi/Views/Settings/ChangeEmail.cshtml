@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!--
+    Author: W3layouts
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Email</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Smart Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link href="/Content/EmptyStyle.css" rel="stylesheet" type="text/css" media="all">
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900iSlabo+27px&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!--//online-fonts -->
+</head>
+<body>
+    <!--header-->
+    <div class="agileheader">
+        <h1>New Email</h1>
+    </div>
+    <!--//header-->
+    <!--main-->
+    <div class="main-w3l">
+        <div class="w3layouts-main">
+            <h2>Enter Your New Email</h2>
+            <form action="#" method="post">
+                <input type="hidden" name="UserId" value="@Session["UserId"]">
+                <input value="New Email" name="email" type="empty" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'New Password';}" />
+
+                <input type="submit" value="Apply" name="Finish">
+            </form>
+
+        </div>
+    </div>
+    <!--//main-->
+    <!--footer-->
+    <div class="footer-w3l">
+        <p>&copy; 2022 Inside Track Login Form. All rights reserved |</p>
+    </div>
+    <!--//footer-->
+
+</body>
+</html>

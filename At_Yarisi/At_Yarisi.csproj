@@ -140,7 +140,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AtYarisiController.cs" />
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RaceController.cs" />
@@ -346,10 +345,12 @@
     <Content Include="Views\Home\SettingsPage.cshtml" />
     <Content Include="Views\Race\HorseRace.cshtml" />
     <Content Include="Views\Race\HorseRaceJs.cshtml" />
+    <Content Include="Views\Settings\ChangeName.cshtml" />
+    <Content Include="Views\Settings\ChangeEmail.cshtml" />
+    <Content Include="Views\Settings\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

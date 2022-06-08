@@ -48,7 +48,7 @@ namespace At_Yarisi.Controllers
                         db.PaymentMethod.Add(model);
                         db.SaveChanges();
                         Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
-                        return View("WalletMenu");
+                        return View("/Views/GirisYap/SetMain.cshtml");
                     }
                     else
                     {

@@ -139,10 +139,11 @@ function Horse(id, x, y){
 			}
             document.getElementById('TotalAmount').value = funds;
 			document.getElementById('funds').innerText = funds;
-			document.getElementById('raceDataForm').submit();
+
 		}else if (results.length == 4){
 			//All horse arrived, enable again the Start Button
 			document.getElementById('start').disabled = false;
+            document.getElementById('raceDataForm').submit();
 		}
 	}
 }

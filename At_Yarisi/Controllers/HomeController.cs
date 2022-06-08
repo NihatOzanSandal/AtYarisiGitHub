@@ -12,6 +12,7 @@ namespace At_Yarisi.Controllers
     public class HomeController : Controller
     {
         private CONTEXT db;
+        
         public HomeController()
         {
             db = new CONTEXT();
