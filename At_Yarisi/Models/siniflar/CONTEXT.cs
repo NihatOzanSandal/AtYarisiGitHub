@@ -4,8 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-
-
 namespace At_Yarisi.Models.siniflar
 {
     public class CONTEXT : DbContext
