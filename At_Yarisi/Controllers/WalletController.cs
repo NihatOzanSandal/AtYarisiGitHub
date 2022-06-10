@@ -40,19 +40,27 @@ namespace At_Yarisi.Controllers
                 if (model != null)
                 {
                     //model.MemberId = loginOlan.id
-                    if (model.CardNumber.Length == 16)
+                    if (model.UserName != null && model.CardNumber != null && model.SecurityCode != 0 && model.Month != 0 && model.Year != 0)
                     {
-                        Session["TL"] = model.Money;
-                        Session["Chip"] = model.Chip;
-                        Session["KartAdi"] = model.UserName;
-                        db.PaymentMethod.Add(model);
-                        db.SaveChanges();
-                        Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
-                        return View("/Views/GirisYap/SetMain.cshtml");
+                        if (model.CardNumber.Length == 16)
+                        {
+                            Session["TL"] = model.Money;
+                            Session["Chip"] = model.Chip;
+                            Session["KartAdi"] = model.UserName;
+                            db.PaymentMethod.Add(model);
+                            db.SaveChanges();
+                            Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
+                            return View("/Views/GirisYap/SetMain.cshtml");
+                        }
+                        else
+                        {
+                            Response.Write("<script lang='JavaScript'>alert('Kart Numarası 16 hane olmalıdır');</script>");
+                            return View();
+                        }
                     }
                     else
                     {
-                        Response.Write("<script lang='JavaScript'>alert('Kart Numarası 16 hane olmalıdır');</script>");
+                        Response.Write("<script lang='JavaScript'>alert('Hiçbir Bilgi Boş Geçilemez Lütfen Hepsini Doldurun');</script>");
                         return View();
                     }
                 }

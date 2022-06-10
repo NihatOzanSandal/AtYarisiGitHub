@@ -30,7 +30,7 @@ namespace At_Yarisi.Controllers
             else
             {
                 Response.Write("<script lang='JavaScript'>alert('Member Id Çekmede Hata Oluştu Lütfen tekrar Login Olunuz');</script>");
-                return View("SetMain");
+                return View("/Views/GirisYap/SetMain.cshtml");
             }
         }
         public ActionResult Race()
