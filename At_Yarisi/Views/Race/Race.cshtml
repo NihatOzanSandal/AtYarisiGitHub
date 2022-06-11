@@ -10,7 +10,6 @@
     <title>Horse Race Game</title>
     <link rel="stylesheet" href="~/Content/JSstyle.css" />
     <link href="/Content/RaceStyle.css" rel="stylesheet" type="text/css" media="all">
-
     <!--
     <script src="~/Scripts/script.js"></script>
     -->
@@ -196,8 +195,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var num_lap = 1, results = [], funds = @Session["Chip"], bethorse, amount;
         document.getElementById('GelirTutar').value = funds;
     </script>
-
-
 </head>
 <body>
     <div class="center">
@@ -258,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         <!--MemberId-->
                         <input type="hidden" id="MemberId" name="MemberId" value="@Session["UserId"]">
                         <!--RaceId-->
-                        <input type="hidden" id="RaceId" name="RaceId" value="@Session["MevcutYarisId"]">
+                        <input type="hidden" id="RaceId" name="RaceId" value="">
                         <!--CardId-->
                         <input type="hidden" id="CardId" name="CardId" value="@Session["CardId"]">
 

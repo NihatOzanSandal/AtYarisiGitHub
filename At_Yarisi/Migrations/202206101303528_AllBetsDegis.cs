@@ -3,16 +3,16 @@ namespace At_Yarisi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CardIdEklendi : DbMigration
+    public partial class AllBetsDegis : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Bets", "CardId", c => c.Int(nullable: false));
+            RenameTable(name: "dbo.AllBets", newName: "Bets");
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Bets", "CardId");
+            RenameTable(name: "dbo.Bets", newName: "AllBets");
         }
     }
 }

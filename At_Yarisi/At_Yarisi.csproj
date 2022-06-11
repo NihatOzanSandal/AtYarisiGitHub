@@ -161,21 +161,9 @@
     <Compile Include="Migrations\202204121704418_RuleTitleEklendi.Designer.cs">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205251155279_düzenlemeSil.cs" />
-    <Compile Include="Migrations\202205251155279_düzenlemeSil.Designer.cs">
-      <DependentUpon>202205251155279_düzenlemeSil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202205251201063_DoublePara.cs" />
     <Compile Include="Migrations\202205251201063_DoublePara.Designer.cs">
       <DependentUpon>202205251201063_DoublePara.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206010918288_BetTablosuEklendi.cs" />
-    <Compile Include="Migrations\202206010918288_BetTablosuEklendi.Designer.cs">
-      <DependentUpon>202206010918288_BetTablosuEklendi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206011215123_ratioyerineId.cs" />
-    <Compile Include="Migrations\202206011215123_ratioyerineId.Designer.cs">
-      <DependentUpon>202206011215123_ratioyerineId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202206031244501_HorseTablosuAdd.cs" />
     <Compile Include="Migrations\202206031244501_HorseTablosuAdd.Designer.cs">
@@ -185,13 +173,17 @@
     <Compile Include="Migrations\202206032048338_atNoEklendi.Designer.cs">
       <DependentUpon>202206032048338_atNoEklendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206071045281_CardIdEklendi.cs" />
-    <Compile Include="Migrations\202206071045281_CardIdEklendi.Designer.cs">
-      <DependentUpon>202206071045281_CardIdEklendi.cs</DependentUpon>
+    <Compile Include="Migrations\202206101254241_AllBetsEklendi.cs" />
+    <Compile Include="Migrations\202206101254241_AllBetsEklendi.Designer.cs">
+      <DependentUpon>202206101254241_AllBetsEklendi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206081049396_totaleklendi.cs" />
-    <Compile Include="Migrations\202206081049396_totaleklendi.Designer.cs">
-      <DependentUpon>202206081049396_totaleklendi.cs</DependentUpon>
+    <Compile Include="Migrations\202206101256474_BetsSil.cs" />
+    <Compile Include="Migrations\202206101256474_BetsSil.Designer.cs">
+      <DependentUpon>202206101256474_BetsSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206101303528_AllBetsDegis.cs" />
+    <Compile Include="Migrations\202206101303528_AllBetsDegis.Designer.cs">
+      <DependentUpon>202206101303528_AllBetsDegis.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\siniflar\Bets.cs" />
@@ -374,17 +366,8 @@
     <EmbeddedResource Include="Migrations\202204121704418_RuleTitleEklendi.resx">
       <DependentUpon>202204121704418_RuleTitleEklendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205251155279_düzenlemeSil.resx">
-      <DependentUpon>202205251155279_düzenlemeSil.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205251201063_DoublePara.resx">
       <DependentUpon>202205251201063_DoublePara.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206010918288_BetTablosuEklendi.resx">
-      <DependentUpon>202206010918288_BetTablosuEklendi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206011215123_ratioyerineId.resx">
-      <DependentUpon>202206011215123_ratioyerineId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206031244501_HorseTablosuAdd.resx">
       <DependentUpon>202206031244501_HorseTablosuAdd.cs</DependentUpon>
@@ -392,11 +375,14 @@
     <EmbeddedResource Include="Migrations\202206032048338_atNoEklendi.resx">
       <DependentUpon>202206032048338_atNoEklendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206071045281_CardIdEklendi.resx">
-      <DependentUpon>202206071045281_CardIdEklendi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206101254241_AllBetsEklendi.resx">
+      <DependentUpon>202206101254241_AllBetsEklendi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206081049396_totaleklendi.resx">
-      <DependentUpon>202206081049396_totaleklendi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206101256474_BetsSil.resx">
+      <DependentUpon>202206101256474_BetsSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206101303528_AllBetsDegis.resx">
+      <DependentUpon>202206101303528_AllBetsDegis.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

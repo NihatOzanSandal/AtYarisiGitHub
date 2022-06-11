@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace At_Yarisi.Models.siniflar
 {
     public class Bets
     {
+
+
         [Key]
         public int ID { get; set; }
 
@@ -23,9 +25,6 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "TotalAmount")]
         public double TotalAmount { get; set; }
 
-        [Required]
-        [Display(Name = "HorseId")]
-        public double HorseId { get; set; }
 
         [Required]
         [Display(Name = "RaceId")]
@@ -35,6 +34,8 @@ namespace At_Yarisi.Models.siniflar
         [Display(Name = "CardId")]
         public int CardId { get; set; }
 
-
+        [Required]
+        [Display(Name = "HorseId")]
+        public double HorseId { get; set; }
     }
 }

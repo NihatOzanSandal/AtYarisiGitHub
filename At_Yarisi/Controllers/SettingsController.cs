@@ -31,6 +31,7 @@ namespace At_Yarisi.Controllers
                 Session["UserName"] = isim;
                 Response.Write("<script lang='JavaScript'>alert('Kullanıcı Adı Başarı İle Değiştirildi');</script>");
                 return View("/Views/GirisYap/SetMain.cshtml");
+                return RedirectToAction("SetMain", "GirisYap");
             }
             else
             {
@@ -57,6 +58,7 @@ namespace At_Yarisi.Controllers
 
                 Response.Write("<script lang='JavaScript'>alert('Kullanıcı Emaili Başarı İle Değiştirildi');</script>");
                 return View("/Views/GirisYap/SetMain.cshtml");
+                return RedirectToAction("SetMain", "GirisYap");
             }
             else
             {
@@ -81,6 +83,7 @@ namespace At_Yarisi.Controllers
                 db.SaveChanges();
                 Response.Write("<script lang='JavaScript'>alert('Kullanıcı Şifresi Başarı İle Değiştirildi');</script>");
                 return View("/Views/GirisYap/SetMain.cshtml");
+                return RedirectToAction("SetMain", "GirisYap");
             }
             else
             {

@@ -3,26 +3,26 @@ namespace At_Yarisi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class düzenlemeSil : DbMigration
+    public partial class BetsSil : DbMigration
     {
         public override void Up()
         {
-            DropTable("dbo.PaymentMethods");
+            DropTable("dbo.Bets");
         }
         
         public override void Down()
         {
             CreateTable(
-                "dbo.PaymentMethods",
+                "dbo.Bets",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
                         MemberId = c.Int(nullable: false),
-                        UserName = c.String(nullable: false),
-                        CardNumber = c.String(nullable: false, maxLength: 12),
-                        SecurityCode = c.Int(nullable: false),
-                        Month = c.Int(nullable: false),
-                        Year = c.Int(nullable: false),
+                        AmountOfBet = c.Double(nullable: false),
+                        TotalAmount = c.Double(nullable: false),
+                        RaceId = c.Int(nullable: false),
+                        CardId = c.Int(nullable: false),
+                        HorseId = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             

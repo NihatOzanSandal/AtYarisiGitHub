@@ -47,6 +47,7 @@ namespace At_Yarisi.Controllers
                 Response.Write("<script lang='JavaScript'>alert('Hesap Oluşturma Başarılı Kazanmaya Bir Adım Daha Yaklaştınız :) ');</script>");
                 //LOGİN SAYFASINA DÖNMELİ Return View
                 return View("/Views/GirisYap/Login.cshtml");
+                return RedirectToAction("Login", "GirisYap");
             }
             catch (Exception)
             {
@@ -124,6 +125,7 @@ namespace At_Yarisi.Controllers
                 db.SaveChanges();
                 Response.Write("<script lang='JavaScript'>alert('Şifre Değiştirme Başarılı Yeni Şifreniz İle Login Olmayı Deneyebilrisiniz.');</script>");
                 return View("/Views/GirisYap/Login.cshtml");
+                return RedirectToAction("Login", "GirisYap");
             }
             else if (ayniKontrol == false)
             {
@@ -134,6 +136,7 @@ namespace At_Yarisi.Controllers
             {
                 Response.Write("<script lang='JavaScript'>alert('Id Çekmede Bir sorun Yaşandı Tekrardan şifre Sıfırlamayı Deneyin');</script>");
                 return View("/Views/Home/ForgetPasswordPage.cshtml");
+                return RedirectToAction("ForgetPasswordPage", "Home");
             }
         }
 

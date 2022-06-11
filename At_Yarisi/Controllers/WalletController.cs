@@ -51,6 +51,7 @@ namespace At_Yarisi.Controllers
                             db.SaveChanges();
                             Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
                             return View("/Views/GirisYap/SetMain.cshtml");
+                            return RedirectToAction("SetMain", "GirisYap");
                         }
                         else
                         {
@@ -75,6 +76,7 @@ namespace At_Yarisi.Controllers
             {
                 Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Bulunmaktadır, Kart Ekleme Başarısız Kart Eklemek İçin Eski Kartınızı Siliniz');</script>");
                 return View("WalletMenu");
+                return RedirectToAction("WalletMenu", "Wallet");
             }
 
 
@@ -106,12 +108,16 @@ namespace At_Yarisi.Controllers
                 //return RedirectToAction("AddPaymentMethod");
 
                 return View("AddPaymentMethod");
+                return RedirectToAction("AddPaymentMethod", "Wallet");
+
             }
             else
             {
                 Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Olmadığından Kartınız Silinemedi Lütfen Önce Kart Ekleyiniz');</script>");
                 //return RedirectToAction("WalletMenu");
                 return View("WalletMenu");
+                return RedirectToAction("AddPaymentMethod", "Wallet");
+
             }
 
 

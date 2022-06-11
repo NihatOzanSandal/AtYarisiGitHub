@@ -12,7 +12,6 @@ namespace At_Yarisi.Models.siniflar
         public DbSet<Rules> Rules { get; set; }
 
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
-
         public DbSet<Bets> Bets { get; set; }
         public DbSet<Horse> Horse { get; set; }
 

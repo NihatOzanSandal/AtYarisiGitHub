@@ -17,20 +17,18 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult PastRacesPage(int id)
         {
-
             var bilgi = db.Bets.Where(x => x.MemberId == id);
-            if (bilgi != null)
-            {
-                //Session["AmountOfBet"] = bilgi.AmountOfBet;
-                //Session["HorseId"] = bilgi.HorseId;
-                //Session["EarningAmount"] = bilgi.EarningAmount;
+            var Varmı = db.Bets.FirstOrDefault(x => x.MemberId == id);
 
+            if (Varmı != null)
+            {
                 return View(bilgi.ToList());
             }
             else
             {
-                Response.Write("<script lang='JavaScript'>alert('Member Id Çekmede Hata Oluştu Lütfen tekrar Login Olunuz');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Geçmiş Yarışınız Bulunmamaktadır.');</script>");
                 return View("/Views/GirisYap/SetMain.cshtml");
+                return RedirectToAction("SetMain", "GirisYap");
             }
         }
         public ActionResult Race()
@@ -41,6 +39,7 @@ namespace At_Yarisi.Controllers
             var bilgi = db.Horse.Where(x => x.HorseName != "BoşIsim");
             return View(bilgi.ToList());
 
+            return View();
         }
         [HttpPost]
         public ActionResult Race(Bets model)
@@ -51,7 +50,12 @@ namespace At_Yarisi.Controllers
             var CardUser = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
             if (model.MemberId == 0)
             {
-                Response.Write("<script lang='JavaScript'>alert('Lütfen Login Olun ve Tekrar Deneyin');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Lütfen Sisteme Login Olun Ve Tekrar Deneyin ');</script>");
+                return View();
+            }
+            else if (model.CardId == 0)
+            {
+                Response.Write("<script lang='JavaScript'>alert('Kart Bilgilerinizi Kontrol Edin ve Tekrar Deneyin ');</script>");
                 return View();
             }
             else
@@ -64,19 +68,19 @@ namespace At_Yarisi.Controllers
                 }
                 else
                 {
-
-
                     if (bilgiler != null)
                     {
 
                         CardUser.Chip = model.TotalAmount;
-
-                        model.RaceId += 1;
-                        db.Bets.Add(model);
-                        db.SaveChanges();
-
                         Session.Remove("Chip");
                         Session["Chip"] = model.TotalAmount;
+
+
+                        model.RaceId = db.Bets.Max(q => q.RaceId) + 1;
+
+                        db.Bets.Add(model);
+
+                        db.SaveChanges();
                         //db.Horse.Add(model);
                         //db.SaveChanges();
 
@@ -92,19 +96,12 @@ namespace At_Yarisi.Controllers
 
         }
 
+        /*Kullanılmayanlar -> */
         public ActionResult RaceParaEkleme()
         {
 
             return View();
         }
-
-
-
-
-
-
-
-        /*Kullanılmayanlar -> */
         public ActionResult HorseRaceJs()
         {
             return View();
