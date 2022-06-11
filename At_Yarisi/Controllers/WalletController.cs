@@ -47,8 +47,12 @@ namespace At_Yarisi.Controllers
                             Session["TL"] = model.Money;
                             Session["Chip"] = model.Chip;
                             Session["KartAdi"] = model.UserName;
+
                             db.PaymentMethod.Add(model);
                             db.SaveChanges();
+                            var cardIdCek = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
+                            Session["CardId"] = cardIdCek.ID;
+
                             Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
                             return View("/Views/GirisYap/SetMain.cshtml");
                             return RedirectToAction("SetMain", "GirisYap");

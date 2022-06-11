@@ -33,11 +33,7 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult Race()
         {
-            Session["MevcutYarisId"] = db.Bets.Max(q => q.ID);
-            Convert.ToInt16(Session["MevcutYarisId"]);
-
-            var bilgi = db.Horse.Where(x => x.HorseName != "BoşIsim");
-            return View(bilgi.ToList());
+ 
 
             return View();
         }
