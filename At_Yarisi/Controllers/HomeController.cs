@@ -47,15 +47,14 @@ namespace At_Yarisi.Controllers
                 Response.Write("<script lang='JavaScript'>alert('Hesap Oluşturma Başarılı Kazanmaya Bir Adım Daha Yaklaştınız :) ');</script>");
                 //LOGİN SAYFASINA DÖNMELİ Return View
                 return View("/Views/GirisYap/Login.cshtml");
-                return RedirectToAction("Login", "GirisYap");
+                RedirectToAction("Login", "GirisYap");
             }
             catch (Exception)
             {
-                Response.Write("<script lang='JavaScript'>alert('Bir Hata Oluştu Birth Day Verisini Lütfen Yıl - Ay - Gün şeklinde girin !Aralara '-' veya Boşluk( ) Koyun, Örnek: 2001-12-21');</script>");
+                Response.Write("<script lang='JavaScript'>alert('BirthDay Verisini Lütfen Yıl - Ay - Gün Olarak ve Aralara (-) veya ( ) Koyarak Tekrar Deneyin, Örnek 2001-12-21 ');</script>");
                 return View();
-                throw;
             }
-
+            //Bir Hata Oluştu Birth Day Verisini Lütfen Yıl - Ay - Gün şeklinde girin !Aralara '-' veya Boşluk( ) Koyun, Örnek: 2001-12-21
 
         }
         public ActionResult CreateAccount2Page()

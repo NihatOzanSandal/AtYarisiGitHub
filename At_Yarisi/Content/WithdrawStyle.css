@@ -57,3 +57,19 @@ input[type="submit"] {
         -moz-transition: 0.5s all;
         -ms-transition: 0.5s all;
     }
+
+
+input[type="input1"] {
+    width: 15%;
+    padding: 1% 0% 1% 1%;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 0%;
+    margin-left: 29%;
+    font-family: 'Roboto', sans-serif;
+    background: url("") no-repeat 10px 11px;
+    background-size: 24px;
+    text-align: left;
+}
