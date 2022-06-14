@@ -103,7 +103,7 @@ namespace At_Yarisi.Controllers
             }
             else
             {
-                Response.Write("<script lang='JavaScript'>alert('Bir Hata Oluştu Lütfen User Name ve Email Bilgilerinizi Kontrol Edip Tekrar Deneyiniz.');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Yanlış Bilgi Girdiniz Lütfen Cevabınızı Kontrol Edip Tekrar Deneyin');</script>");
                 return View();
             }
         }
