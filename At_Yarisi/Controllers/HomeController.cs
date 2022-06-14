@@ -37,21 +37,39 @@ namespace At_Yarisi.Controllers
         [HttpPost]
         public ActionResult CreateAccountPage(Members model)
         {
+            var EmailBilgisi = db.Members.FirstOrDefault(x => x.Email == model.Email);
+            var UserNameBilgisi = db.Members.FirstOrDefault(x => x.UserName == model.UserName);
 
-            ViewBag.Message = "Create Account Page ";
-            try
+            if (EmailBilgisi == null)
             {
-                db.Members.Add(model);
-                db.SaveChanges();
+                if (UserNameBilgisi == null)
+                {
+                    ViewBag.Message = "Create Account Page ";
+                    try
+                    {
+                        db.Members.Add(model);
+                        db.SaveChanges();
 
-                Response.Write("<script lang='JavaScript'>alert('Hesap Oluşturma Başarılı Kazanmaya Bir Adım Daha Yaklaştınız :) ');</script>");
-                //LOGİN SAYFASINA DÖNMELİ Return View
-                return View("/Views/GirisYap/Login.cshtml");
-                RedirectToAction("Login", "GirisYap");
+                        Response.Write("<script lang='JavaScript'>alert('Hesap Oluşturma Başarılı Kazanmaya Bir Adım Daha Yaklaştınız :) ');</script>");
+                        //LOGİN SAYFASINA DÖNMELİ Return View
+                        return View("/Views/GirisYap/Login.cshtml");
+                        RedirectToAction("Login", "GirisYap");
+                    }
+                    catch (Exception)
+                    {
+                        Response.Write("<script lang='JavaScript'>alert('BirthDay Verisini Lütfen Yıl - Ay - Gün Olarak ve Aralara (-) veya ( ) Koyarak Tekrar Deneyin, Örnek 2001-12-21 ');</script>");
+                        return View();
+                    }
+                }
+                else
+                {
+                    Response.Write("<script lang='JavaScript'>alert('Bu User Name Kullanılmaktadır. Lütfen Başka bir User Name ile Kayıt Olmayı Deneyiniz');</script>");
+                    return View();
+                }
             }
-            catch (Exception)
+            else
             {
-                Response.Write("<script lang='JavaScript'>alert('BirthDay Verisini Lütfen Yıl - Ay - Gün Olarak ve Aralara (-) veya ( ) Koyarak Tekrar Deneyin, Örnek 2001-12-21 ');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Bu E-Mail Adresi Kullanılmaktadır. Lütfen Başka bir E-Mail Adresi ile Kayıt Olmayı Deneyiniz');</script>");
                 return View();
             }
             //Bir Hata Oluştu Birth Day Verisini Lütfen Yıl - Ay - Gün şeklinde girin !Aralara '-' veya Boşluk( ) Koyun, Örnek: 2001-12-21
