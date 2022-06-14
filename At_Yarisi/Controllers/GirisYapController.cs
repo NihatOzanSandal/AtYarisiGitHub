@@ -51,7 +51,7 @@ namespace At_Yarisi.Controllers
             }
             else
             {
-                Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Kullanıcı Adınızı ve Şifrenizi Kontrol Edip Lütfen Tekrar Deneyin');</script>");
+                Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Kullanıcı E-mail inizi ve Şifrenizi Kontrol Edip Lütfen Tekrar Deneyin');</script>");
                 return View();
             }
         }
