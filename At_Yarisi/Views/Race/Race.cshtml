@@ -173,6 +173,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             alert('You cannot select an amount below 0.');
 		}else {
 
+            var audio = new Audio("/Mp3/Gulbatur.mp3");
+			audio.play();
+
 			/*Started the game*/
 			this.disabled = true;/*Disable the start button*/
 			var tds = document.querySelectorAll('#results .result');//Get all cells of result table.
@@ -187,6 +190,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			horse2.run();
 			horse3.run();
 			horse4.run();
+
+
 		}
 	}
 });

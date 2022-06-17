@@ -222,6 +222,7 @@
     <Content Include="Content\CanliChatStyle.css" />
     <Content Include="Content\PastRacesStyle.css" />
     <Content Include="Content\SettingsStyle.css" />
+    <Content Include="Content\SoundStyle.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Content\WithdrawStyle.css" />
     <Content Include="Content\WalletGeneralStyle.css" />
@@ -276,10 +277,12 @@
     <Content Include="images\MainMenuRaceScreen.png" />
     <Content Include="images\MainMenuWithRace.png" />
     <Content Include="images\pass.png" />
+    <Content Include="images\playicon2.png" />
     <Content Include="images\profileIcon.jpg" />
     <Content Include="images\profileIcon2.jpg" />
     <Content Include="images\Rules1512x982.png" />
     <Content Include="images\StartUpSellectionSml2.jpg" />
+    <Content Include="Mp3\Gulbatur.mp3" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
