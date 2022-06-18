@@ -222,7 +222,6 @@
     <Content Include="Content\CanliChatStyle.css" />
     <Content Include="Content\PastRacesStyle.css" />
     <Content Include="Content\SettingsStyle.css" />
-    <Content Include="Content\SoundStyle.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Content\WithdrawStyle.css" />
     <Content Include="Content\WalletGeneralStyle.css" />

@@ -44,18 +44,26 @@ namespace At_Yarisi.Controllers
                     {
                         if (model.CardNumber.Length == 16)
                         {
-                            Session["TL"] = model.Money;
-                            Session["Chip"] = model.Chip;
-                            Session["KartAdi"] = model.UserName;
+                            if (model.MemberId == 0)
+                            {
+                                Response.Write("<script lang='JavaScript'>alert(' ! Kullanıcı Id Çekme Hatası ! Lütfen Tekrardan Login Olun ');</script>");
+                                return View("/Views/GirisYap/Login.cshtml");
+                            }
+                            else
+                            {
+                                Session["TL"] = model.Money;
+                                Session["Chip"] = model.Chip;
+                                Session["KartAdi"] = model.UserName;
 
-                            db.PaymentMethod.Add(model);
-                            db.SaveChanges();
-                            var cardIdCek = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
-                            Session["CardId"] = cardIdCek.ID;
+                                db.PaymentMethod.Add(model);
+                                db.SaveChanges();
+                                var cardIdCek = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
+                                Session["CardId"] = cardIdCek.ID;
 
-                            Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
-                            return View("/Views/GirisYap/SetMain.cshtml");
-                            return RedirectToAction("SetMain", "GirisYap");
+                                Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
+                                return View("/Views/GirisYap/SetMain.cshtml");
+                                return RedirectToAction("SetMain", "GirisYap");
+                            }                          
                         }
                         else
                         {
