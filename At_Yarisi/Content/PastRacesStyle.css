@@ -25,6 +25,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.center2 {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .kural1 {
     margin-top: 170px;
     margin-left: 30%;

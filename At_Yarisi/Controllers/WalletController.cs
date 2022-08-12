@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.Security;
 using At_Yarisi.Models.siniflar;
 
 namespace At_Yarisi.Controllers
@@ -25,14 +21,24 @@ namespace At_Yarisi.Controllers
         {
             return View();
         }
-        public ActionResult AddPaymentMethod()
+        public ActionResult AddPaymentMethod(int id)
         {
-            return View();
+            var KartVarmiKontrol = db.PaymentMethod.FirstOrDefault(x => x.MemberId == id);
+            if (KartVarmiKontrol == null)
+            {
+                return View();
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Mevcut Kart Bulunmaktadır, Kart Eklemek İçin Fütfen Eski Kartınızı Siliniz');</script>");
+                return View("WalletMenu");
+                return RedirectToAction("WalletMenu", "Wallet");
+            }
+            
         }
         [HttpPost]
         public ActionResult AddPaymentMethod(PaymentMethod model)
         {
-            //KART EKLENİNCE SESSİON EKLENMELİ
             bool TekKartKontrol = Session["TL"] == null;
 
             if (TekKartKontrol == true)
@@ -63,7 +69,7 @@ namespace At_Yarisi.Controllers
                                 Response.Write("<script lang='JavaScript'>alert('Kart Ekleme Başarılı, Kazanmaya Bir Adım Daha Yaklaştınız');</script>");
                                 return View("/Views/GirisYap/SetMain.cshtml");
                                 return RedirectToAction("SetMain", "GirisYap");
-                            }                          
+                            }
                         }
                         else
                         {
@@ -90,7 +96,6 @@ namespace At_Yarisi.Controllers
                 return View("WalletMenu");
                 return RedirectToAction("WalletMenu", "Wallet");
             }
-
 
 
         }

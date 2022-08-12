@@ -17,12 +17,17 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult PastRacesPage(int id)
         {
+            ////////////////  Son 5 Yazdırma Denemesi
             var bilgi = db.Bets.Where(x => x.MemberId == id);
             var Varmı = db.Bets.FirstOrDefault(x => x.MemberId == id);
-
-            if (Varmı != null)
+            if (bilgi.Count() <= 5)
             {
                 return View(bilgi.ToList());
+            }
+            //////////////////
+            if (Varmı != null)
+            {
+               return View(bilgi.ToList());
             }
             else
             {
@@ -33,17 +38,19 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult Race()
         {
- 
-
             return View();
         }
         [HttpPost]
         public ActionResult Race(Bets model)
         {
             //      VERİLER DOĞRU BİR ŞEKİLDE ÇEKİLDİKTEN SONRA BETS VE WALLET TABLOSUNA YANSITILMALI
-
+            var SayiKontrol = db.Bets.Where(x => x.MemberId == model.MemberId);
             var bilgiler = db.Members.FirstOrDefault(x => x.ID == model.MemberId);
             var CardUser = db.PaymentMethod.FirstOrDefault(x => x.MemberId == model.MemberId);
+            if (SayiKontrol.Count() >= 5)
+            {
+                db.Bets.Remove(SayiKontrol.FirstOrDefault());
+            }
             if (model.MemberId == 0)
             {
                 Response.Write("<script lang='JavaScript'>alert('Lütfen Sisteme Login Olun Ve Tekrar Deneyin ');</script>");
