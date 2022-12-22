@@ -17,14 +17,14 @@ namespace At_Yarisi.Controllers
         }
         public ActionResult PastRacesPage(int id)
         {
-            ////////////////  Son 5 Yazdırma Denemesi
+            /*Son 5 Yazdırma Denemesi*/
             var bilgi = db.Bets.Where(x => x.MemberId == id);
             var Varmı = db.Bets.FirstOrDefault(x => x.MemberId == id);
             if (bilgi.Count() <= 5)
             {
                 return View(bilgi.ToList());
             }
-            //////////////////
+            /*End of Listing 5*/
             if (Varmı != null)
             {
                return View(bilgi.ToList());

@@ -215,6 +215,7 @@
     <Content Include="Content\HorseRaceStyle.css" />
     <Content Include="Content\JSstyle.css" />
     <Content Include="Content\MyStyle.css" />
+    <Content Include="Content\NewSettingsStyle.css" />
     <Content Include="Content\RulesStyle.css" />
     <Content Include="Content\MainMenuStyle.css" />
     <Content Include="Content\AddMoney.css" />
@@ -266,6 +267,7 @@
     <Content Include="images\images\inner.png" />
     <Content Include="images\images\mud.png" />
     <Content Include="images\images\outer.png" />
+    <Content Include="images\images\ReadyForWin.png" />
     <Content Include="images\images\sword0.png" />
     <Content Include="images\images\sword1.png" />
     <Content Include="images\images\sword2.png" />
@@ -279,6 +281,10 @@
     <Content Include="images\playicon2.png" />
     <Content Include="images\profileIcon.jpg" />
     <Content Include="images\profileIcon2.jpg" />
+    <Content Include="images\ReadyForWin.png" />
+    <Content Include="images\ReadyForWin2.png" />
+    <Content Include="images\ReadyForWin3.png" />
+    <Content Include="images\ReadyForWinCold.png" />
     <Content Include="images\Rules1512x982.png" />
     <Content Include="images\StartUpSellectionSml2.jpg" />
     <Content Include="Mp3\Gulbatur.mp3" />
@@ -354,6 +360,7 @@
     <Content Include="Views\Settings\ChangeEmail.cshtml" />
     <Content Include="Views\Settings\ChangePassword.cshtml" />
     <Content Include="Views\Home\QuestionPage.cshtml" />
+    <Content Include="Views\GirisYap\RiskFreeLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

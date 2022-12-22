@@ -1,5 +1,6 @@
 body {
-    background-image: url("../images/MainMenuWithRace.png");
+    /*background-image: url("../images/MainMenuWithRace.png");*/
+    background-image: url("../images/ReadyForWin3.png");
     background-repeat: no-repeat;
     background-size: cover;
 }

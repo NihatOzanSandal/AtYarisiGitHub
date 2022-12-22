@@ -1,11 +1,11 @@
 body {
-    background-image: url("../images/KartliBg.png");
+    /*background-image: url("../images/KartliBg.png");*/
+    background-image: url("../images/ReadyForWinCold.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .button {
-    background-color: rebeccapurple;
+    background-color: black;
     border: none;
     color: white;
     padding: 15px 50px;
@@ -41,7 +41,7 @@ body {
 .center1 {
     margin: 0;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);

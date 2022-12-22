@@ -55,6 +55,45 @@ namespace At_Yarisi.Controllers
                 return View();
             }
         }
+        public ActionResult RiskFreeLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RiskFreeLogin(Members model, PaymentMethod Para)
+        {
+            var bilgiler = c.Members.FirstOrDefault(x => x.Email == model.Email && x.Password == model.Password);
+
+            if (bilgiler != null)
+            {
+                FormsAuthentication.SetAuthCookie(bilgiler.Email, false);
+                //Session["Email"] = bilgiler.Email.ToString();  
+                Session["UserId"] = bilgiler.ID;
+                Session["UserName"] = bilgiler.UserName;
+                var paraBilgisi = c.PaymentMethod.FirstOrDefault(x => x.MemberId == bilgiler.ID);
+                if (paraBilgisi != null)
+                {
+                    Session["CardId"] = paraBilgisi.ID;
+                    Session["TL"] = paraBilgisi.Money;
+                    Session["Chip"] = paraBilgisi.Chip;
+                    Session["KartAdi"] = paraBilgisi.UserName;
+                    return RedirectToAction("SetMain", "GirisYap");
+                }
+                else
+                {
+                    return RedirectToAction("SetMain", "GirisYap");
+                }
+                //c.Members.Remove();
+
+                //session id atıp tutulur ,cookie de tutulur local storage temp de 
+
+            }
+            else
+            {
+                Response.Write("<script lang='JavaScript'>alert('Kullanıcı Girişi Başarısız Kullanıcı E-mail inizi ve Şifrenizi Kontrol Edip Lütfen Tekrar Deneyin');</script>");
+                return View();
+            }
+        }
         public ActionResult SetMain(PaymentMethod Para)
         {
             var paraBilgisi = c.PaymentMethod.FirstOrDefault(x => x.ID == Para.ID);

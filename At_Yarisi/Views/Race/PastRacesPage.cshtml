@@ -18,30 +18,31 @@
         <div class="kural1">
             <h1 style="color:aliceblue">Your Last 5 Race : </h1>
 
-                @foreach (var item in Model)
-                {
+            @foreach (var item in Model)
+            {
             <tr>
 
                 <div class="kural">
                     <hr />
-                    <a class="a1" style="color:yellow;">
+                    <a class="a1" style="color:white;">
                         Your Bet : @Html.DisplayFor(modelItem => item.AmountOfBet) Chip
                     </a>
-                    <a class="a2" style="color:yellow;">
+                    <a class="a2" style="color: white; ">
                         Your Chip After Race : @Html.DisplayFor(modelItem => item.TotalAmount) Chip
                     </a>
-                    <a class="a3" style="color:yellow;">
+                    <a class="a3" style="color: white; ">
                         The Horse : Number @Html.DisplayFor(modelItem => item.HorseId)
                     </a>
                     <hr />
                 </div>
             </tr>
         }
-
-                <div class="center">
-                    <a href="/GirisYap/SetMain" class="button">Close</a>
-                </div>
             </div>
-            </table>
-        </body>
-    </html>
+            <!--<div class="center">-->
+            <div class="kural2">
+                <a href="/GirisYap/SetMain" class="button">Close</a>
+           <!--</div>-->
+            </div>
+        </table>
+    </body>
+</html>

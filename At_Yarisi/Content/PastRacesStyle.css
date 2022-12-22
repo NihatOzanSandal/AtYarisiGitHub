@@ -1,5 +1,6 @@
 body {
-    background-image: url("../images/KartliBg.png");
+    /*background-image: url("../images/KartliBg.png");*/
+    background-image: url("../images/ReadyForWinCold.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,7 +20,7 @@ body {
 .center {
     margin: 0;
     position: absolute;
-    top: 80%;
+    top: 0px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -41,8 +42,16 @@ body {
     padding: 0px;
 }
 
+.kural2 {
+    margin-top: 40px;
+    margin-left: 45%;
+    width: 50%;
+    padding: 0px;
+}
+
 .kural {
-    margin-top: 0px;
+    background-color: #151617;
+    bac margin-top: 0px;
     margin-left: 25%;
     width: 50%;
     padding: 0px;
